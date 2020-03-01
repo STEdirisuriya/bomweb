@@ -1,0 +1,271 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <!-- Other Css -->
+    <script src="https://www.gstatic.com/firebasejs/5.0.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.0.3/firebase-firestore.js"></script>
+    <link href="style.css" rel="stylesheet">
+
+    <!-- Font Awesome-->
+    <link href="/your-path-to-fontawesome/css/fontawesome.css" rel="stylesheet">
+    <link href="/your-path-to-fontawesome/css/brands.css" rel="stylesheet">
+    <link href="/your-path-to-fontawesome/css/solid.css" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap" rel="stylesheet">
+
+    <title>
+      BOM LIVE SCORE 20
+    </title>
+
+  </head>
+
+  <body>
+  
+  <div class="topic">
+    BATTLE OF MAROONS LIVE SCORE
+  </div>
+
+  <img src="./assets/background.jpg" class="bg" alt="">
+
+  <!-- <div class="card col-10 mx-auto position-fixed status ">
+    <div class="card-body">
+      <h4>Ananda College</h4>
+      Batting now
+    </div>
+  </div> -->
+  <div class="col-10 mx-auto position-absolute status">
+    <div class="card-body">
+      <div class="container">
+        <div class="card-body">
+          <h3 class="schoolname">Ananda College</h3>
+          <p class="battext">Batting now</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card col-10 mx-auto border shadow score">
+    <div class="card-body">
+      <div class="container">
+        <div class="row">
+          <div class="col-5 align-self-center">
+            <img src="./assets/Ananda.png" class="logo" alt="">
+          </div>
+          <div class="col align-self-center scorenum">
+            <h1 class="">220 / 5</h1>
+            <div class="row details">
+              <div class="col">
+                <h5>5</h5>
+                <h6>Ovs</h6>
+              </div>
+              <div class="col">
+                <h5>4.5</h5>
+                <h6>RR</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card col-10 mx-auto border border-white extras">
+    <div class="card-body">
+      <div class="container">
+        <div class="row">
+          <div class="col align-self-center border-right border-danger">
+            WB
+            <br>
+            <b>01</b>
+          </div>
+          <div class="col align-self-center border-right border-danger">
+            NB
+            <br>
+            <b>01</b>
+          </div>
+          <div class="col align-self-center border-right border-danger">
+            LB
+            <br>
+            <b>01</b>
+          </div>
+          <div class="col align-self-center">
+            BY
+            <br>
+            <b>01</b>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card col-10 mx-auto border shadow players">
+    <div class="card-body">
+      <div class="container">
+        <div class="batting">
+          <div class="row rounded-pill bat">
+            <div class="col-9 align-self-center namebat">
+              Hasalu Botheju
+            </div>
+            <div class="col align-self-center pointsbat rounded-pill">
+              50
+            </div>
+          </div>
+          <div class="row rounded-pill bat">
+            <div class="col-9 align-self-center namebat">
+              Supun Tharinda
+            </div>
+            <div class="col align-self-center pointsbat rounded-pill">
+              200
+            </div>
+          </div>
+          <div class="row rounded-pill ball">
+            <div class="col-9 align-self-center nameball">
+              Bowling
+              <br>
+              Hasala Heyiyanthuduwa
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer fixed-bottom">
+    <div class="card-body">
+      <div class="container">
+        <div class="row">
+          <div class="col-3 align-self-center">
+            <img src="./assets/acicts.png" class="img-fluid" alt="">
+          </div>
+          <div class="col align-self-center acicts">
+            Project By ACICTS
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- 
+    <form id="update-inn-form">
+    
+    <select name="innlive">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">Oneday1</option>
+        <option value="6">Oneday2</option>
+    </select>
+    <select name="school">
+      <option value="ananda">Ananda</option>
+      <option value="nalanda">Nalanda</option>
+  </select>
+    <button>Update inning</button>
+  </form>
+  <p>Live inn:<b id="inn"></b></p>
+  <p>Live sch:<b id="sch"></b></p> -->
+
+ 
+<!--   
+  <ion-content>
+    <ion-card class="cardmain">
+      <ion-card-header class="scoreboard">
+        <div class="flagAnanda">
+          <ion-grid>
+            <ion-row>
+              <ion-col>
+                <div class="col1"></div>
+              </ion-col>
+              <ion-col>
+                <div class="col2"></div>
+              </ion-col>
+              <ion-col>
+                <div class="col3"></div>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </div>
+        
+        <ion-card-title class="scorenlogo">
+          <ion-row>
+            <ion-col size="3">
+               <img src="./assets/Ananda.png" alt="" class="logo"> -->
+              <!-- <h6 class="schoolname">Ananda</h6>
+            </ion-col>
+            <ion-col>
+              <h1 class="score" id="appfullpts"><pre>{{text | json}}</pre></h1>
+              <ion-card-subtitle class="inning">
+                <ion-icon name="radio-button-on" class="icon"></ion-icon>
+                1<sup>st</sup> INNING
+              </ion-card-subtitle>
+            </ion-col>
+            <ion-col size="3">
+              <div class="detailssc" style="float: right;">
+                <h3 style="margin-bottom:-20px;" class="nums">2.5</h3>
+                <h6 style="margin-bottom:-10px;">Overs</h6>
+                <h3 style="margin-bottom:-20px;" class="nums">5.0</h3>
+                <h6>Run Rate</h6>
+                </div>
+            </ion-col>
+          </ion-row>
+        </ion-card-title>
+      </ion-card-header>
+    
+      <ion-card-content class="extras">
+        <br>
+        <b class="caption"> BATTING - AC</b>
+        <h4 class="player">
+          
+        </h4>
+        <br>
+        <h4 class="player">Hasala Heiyanthuduwa - 70 (6)</h4>
+        <br>
+      </ion-card-content>
+  
+      <ion-card-content class="batting">
+        <br>
+        <b class="caption"> BATTING - AC</b>
+        <h4 class="player">
+          <div *ngIf="player">
+            <div>
+              <label>First Name: </label> {{player.name}}
+            </div>
+            </div> - 100 (10)*
+        </h4>
+        <br>
+        <h4 class="player">Hasala Heiyanthuduwa - 70 (6)</h4>
+        <br>
+      </ion-card-content>
+  
+      <div class="line"></div>
+  
+      
+    </ion-card>
+    
+  
+    <ion-card class="balling-panel">
+        <ion-card-content class="balling">
+            <h6 class="other">  NALANDA - 250 </h6>
+            <b class="caption">BOWLING</b>
+            <h4 class="player">Hasalu Botheju - 20(15)</h4>
+          <br>
+          <h4 class="player">Pahan Samudika - 50(5)</h4>
+          </ion-card-content>
+    </ion-card>
+     --> 
+   
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>
