@@ -52,7 +52,6 @@ fullpoints.onSnapshot(function(doc) {
 //now inn(schoolname, inningtype)
 
 var school = document.getElementById('school');
-var bg = document.getElementById('bg');
 var logo = document.getElementById('logo');
 
 var nowinn = db.collection("other").doc("nowinn");
@@ -61,11 +60,9 @@ nowinn.onSnapshot(function(doc) {
   schoolname = doc.data().play;
   if(schoolname == 'ananda'){
     school.innerHTML = "Ananda College";
-    bg.src = './assets/bgac.png'
-    logo.src ='./assets/Ananda.png';
+    logo.src='./assets/Ananda.png';
   }else if(schoolname == 'nalanda'){
     school.innerHTML = "Nalanda College";
-    bg.src = './assets/bgnc.png'
     logo.src='./assets/Nalanda.png';
   }
 });
@@ -74,40 +71,41 @@ nowinn.onSnapshot(function(doc) {
 var batting = document.getElementById("batting");
 
 function renderPlayer(doc){
-  let divplayer = document.createElement('div');
+  let li = document.createElement('li');
   let divname = document.createElement('div');
   let divscore = document.createElement('div');
 
-  divplayer.setAttribute('class', 'row rounded-pill bat');
-  divplayer.setAttribute('data-id', doc.id);
+  li.setAttribute('class', 'row rounded-pill bat');
+  li.setAttribute('data-id', doc.id);
   divname.setAttribute('class', 'col-9 align-self-center namebat');
   divname.textContent = doc.name;
   divscore.setAttribute('class', 'col align-self-center pointsbat rounded-pill');
   divscore.textContent = doc.points;
 
-  divplayer.appendChild(divname);
-  divplayer.appendChild(divscore);
+  li.appendChild(divname);
+  li.appendChild(divscore);
 
-  batting.appendChild(divplayer);
+  batting.appendChild(li);
 };
 
 nowinn.onSnapshot(function(doc) {
   currentinn = doc.data().inn;
   battingnow = db.collection("batting/inn" + currentinn + "/players").where("in", "==", true).limit(2);
 
-  battingnow.onSnapshot(function(playerdoc) {
-    let changes = playerdoc.docChanges();
-    changes.forEach(function(change)  {
+  battingnow.onSnapshot(snapshot => {
+    let changes = snapshot.docChanges();
+    changes.forEach(change => {
         console.log(change.doc.data());
-        // if(div == undefined){
-            let div = batting.querySelector('[data-id=' + change.doc.data().id + ']');
-            batting.removeChild(div);
-            renderPlayer(change.doc.data());
-        // } else {
-        //     let div = batting.querySelector('[data-id=' + change.doc.data().id + ']');
-        //     batting.removeChild(div);
-        //     renderPlayer(change.doc.data());
-        // }
+        if(change.type == 'added'){
+          renderPlayer(change.doc.data());
+        } else if (change.type == 'removed'){
+          let li = batting.querySelector('[data-id=' + change.doc.data().id + ']');
+          batting.removeChild(li);
+        } else if (change.type == 'modified'){
+          let li = batting.querySelector('[data-id=' + change.doc.data().id + ']');
+          batting.removeChild(li);
+          renderPlayer(change.doc.data());
+        }
     });
 });
 });

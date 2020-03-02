@@ -7,10 +7,18 @@ body{
   padding: 20px;
   width: 100%;
   z-index: 2;
+  position: fixed;
+}
+
+.imageholder{
+  display: inline-block;
+  /* clip-path: circle(100% at 34% -2%); */
 }
 
 .bg{
   width: 100%;
+  margin-top: -10%;
+  z-index: -1;
 }
 
 .inning{
@@ -35,8 +43,8 @@ body{
 }
 
 .score{
-  margin-top: -60%;
-  background-color: rgba(174, 0, 0, 0.8);
+  margin-top: -25%;
+  background-color: rgb(174, 0, 0);
   color: white;
 }
 
