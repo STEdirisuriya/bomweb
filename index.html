@@ -13,12 +13,6 @@
     <script src="https://www.gstatic.com/firebasejs/5.0.3/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.0.3/firebase-firestore.js"></script>
     <link href="style.css" rel="stylesheet">
-
-    <!-- Font Awesome-->
-    <link href="/your-path-to-fontawesome/css/fontawesome.css" rel="stylesheet">
-    <link href="/your-path-to-fontawesome/css/brands.css" rel="stylesheet">
-    <link href="/your-path-to-fontawesome/css/solid.css" rel="stylesheet">
-
     <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap" rel="stylesheet">
 
     <title>
@@ -35,18 +29,15 @@
 
   <img src="./assets/background.jpg" class="bg" alt="">
 
-  <!-- <div class="card col-10 mx-auto position-fixed status ">
-    <div class="card-body">
-      <h4>Ananda College</h4>
-      Batting now
-    </div>
-  </div> -->
+
+
   <div class="col-10 mx-auto position-absolute status">
     <div class="card-body">
       <div class="container">
         <div class="card-body">
-          <h3 class="schoolname">Ananda College</h3>
+          <h3 class="schoolname" id="school">---</h3>
           <p class="battext">Batting now</p>
+          <p class="inning" id="inning">1<sup>st</sup> Inning</p>
         </div>
       </div>
     </div>
@@ -57,17 +48,17 @@
       <div class="container">
         <div class="row">
           <div class="col-5 align-self-center">
-            <img src="./assets/Ananda.png" class="logo" alt="">
+            <img src="./assets/Ananda.png" id="logo" class="logo" alt="">
           </div>
           <div class="col align-self-center scorenum">
-            <h1 class="">220 / 5</h1>
+            <h1 class="" id="livescore">000 / 0</h1>
             <div class="row details">
               <div class="col">
-                <h5>5</h5>
+                <h5 id="overs">0.0</h5>
                 <h6>Ovs</h6>
               </div>
               <div class="col">
-                <h5>4.5</h5>
+                <h5 id="runrate">00.00</h5>
                 <h6>RR</h6>
               </div>
             </div>
@@ -84,22 +75,22 @@
           <div class="col align-self-center border-right border-danger">
             WB
             <br>
-            <b>01</b>
+            <b id="wides">0</b>
           </div>
           <div class="col align-self-center border-right border-danger">
             NB
             <br>
-            <b>01</b>
+            <b id="noballs">0</b>
           </div>
           <div class="col align-self-center border-right border-danger">
             LB
             <br>
-            <b>01</b>
+            <b id="legbyes">0</b>
           </div>
           <div class="col align-self-center">
             BY
             <br>
-            <b>01</b>
+            <b id="byes">0</b>
           </div>
         </div>
       </div>

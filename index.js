@@ -1,36 +1,68 @@
 var config = {
-    apiKey: "AIzaSyCE-a58l70XTfJE1aejzBwA0mlv-TGtTcI",
-    authDomain: "bomnew-89e70.firebaseapp.com",
-    databaseURL: "https://bomnew-89e70.firebaseio.com",
-    projectId: "bomnew-89e70",
-    storageBucket: "bomnew-89e70.appspot.com",
-    messagingSenderId: "992176288679",
-    appId: "1:992176288679:web:fe9f7fea4519a3b25c3c82",
-    measurementId: "G-F6GH0EB1W3"
+  apiKey: "AIzaSyB9C-ocmR0dhZbDZxU7vWyr6GqcHgk5cOc",
+  authDomain: "bomdb-57efe.firebaseapp.com",
+  databaseURL: "https://bomdb-57efe.firebaseio.com",
+  projectId: "bomdb-57efe",
+  storageBucket: "bomdb-57efe.appspot.com",
+  messagingSenderId: "509449260834",
+  appId: "1:509449260834:web:8be8a90fdaad1ac31e5f7b",
+  measurementId: "G-QKY8J7YJX9"
 };
 firebase.initializeApp(config);
 const db = firebase.firestore();
 db.settings({ timestampsInSnapshots: true }); 
 
-var divinn = document.getElementById('inn');
-var divsch = document.getElementById('sch');
+var livescore = document.getElementById('livescore');
+var overs = document.getElementById('overs');
+var runrate = document.getElementById('runrate');
+var wides = document.getElementById('wides');
+var noballs = document.getElementById('noballs');
+var byes = document.getElementById('byes');
+var legbyes = document.getElementById('legbyes');
+var inning = document.getElementById('inning');
 
+var fullpoints = db.collection("other").doc("fullpoints");
 
-
-var docRef = db.collection("now").doc("inn");
-
-docRef.onSnapshot(function(doc) {
-    divinn.innerHTML = doc.data().innlive;
-    divsch.innerHTML = doc.data().school;
+fullpoints.onSnapshot(function(doc) {
+  testmatch = doc.data().testmatch;
+  innnum = doc.data().inn;
+  if(testmatch){
+    if(innnum == "1"){
+      inning.innerHTML  = '1<sup> st </sup> Inning';
+    }else if(innnum == "2"){
+      inning.innerHTML  = '2<sup> nd </sup> Inning';
+    }
+  }else{
+    inning.innerHTML  = 'Oneday Match';
+  }
+  livescore.innerHTML = doc.data().points + ' / ' + doc.data().wickets;
+  scorenum = doc.data().points;
+  overs.innerHTML = doc.data().overs + '.' + doc.data().balls;
+  oversnum = doc.data().overs + '.' + doc.data().balls;
+  runratenum = (scorenum/parseFloat(oversnum)).toFixed(2);
+  runrate.innerHTML = runratenum;
+  wides.innerHTML = doc.data().wides;
+  noballs.innerHTML = doc.data().noballs;
+  byes.innerHTML = doc.data().byes;
+  legbyes.innerHTML = doc.data().legbyes;
 } 
 );
-///
-const form = document.querySelector('#update-inn-form');
 
-form.addEventListener("submit", (e) => {
-e.preventDefault();
-db.collection("now").doc("inn").update({
-  innlive: form.innlive.value,
-  school: form.school.value,
-});
-});
+var school = document.getElementById('school');
+var logo = document.getElementById('logo');
+
+var nowinn = db.collection("other").doc("nowinn");
+
+nowinn.onSnapshot(function(doc) {
+  schoolname = doc.data().play;
+  if(schoolname == 'ananda'){
+    school.innerHTML = "Ananda College";
+    logo.src='./assets/Ananda.png';
+  }else if(schoolname == 'nalanda'){
+    school.innerHTML = "Nalanda College";
+    logo.src='./assets/Nalanda.png';
+  }
+  playinn = doc.data().inn;
+  playschool = doc.data().play;
+} 
+);
