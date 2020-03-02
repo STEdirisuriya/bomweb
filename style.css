@@ -19,6 +19,7 @@ body{
 .status{
   /* sposition: absolute; */
   top: 100px;
+  color: white;
 }
 
 .schoolname{
@@ -35,7 +36,8 @@ body{
 
 .score{
   margin-top: -60%;
-  background-color: rgb(252, 252, 252, 0.8);
+  background-color: rgba(174, 0, 0, 0.8);
+  color: white;
 }
 
 .logo{
@@ -73,7 +75,7 @@ body{
 }
 
 .bat{
-  background-color: salmon;
+  background-color: rgba(250, 128, 114, 0.8);
   margin-top: 15px;
 }
 
@@ -84,7 +86,7 @@ body{
 
 .pointsbat{
   padding: 5px;
-  background-color: rgb(204, 60, 44);
+  background-color: rgba(204, 60, 44, 0.8);
   text-align: center;
 }
 
