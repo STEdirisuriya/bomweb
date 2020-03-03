@@ -23,6 +23,7 @@ body{
   /* sposition: absolute; */
   top: 100px;
   color: white;
+  z-index: -1;
 }
 
 .schoolname{
