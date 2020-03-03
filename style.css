@@ -21,9 +21,6 @@ body{
   z-index: -1;
 }
 
-.inning{
-}
-
 .status{
   /* sposition: absolute; */
   top: 100px;
@@ -32,10 +29,16 @@ body{
 
 .schoolname{
   font-size: 7vw;
+  margin-bottom: -2%;
 }
 
 .battext{
   font-size: 4.5vw;
+}
+
+.inning{
+  margin-top: 10%;
+  
 }
 
 .card-body{
