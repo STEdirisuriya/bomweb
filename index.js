@@ -30,9 +30,9 @@ fullpoints.onSnapshot(function(doc) {
   innnum = doc.data().inn;
   if(testmatch){
     if(innnum == "1"){
-      inning.innerHTML  = '1<sup>st</sup> Inning';
+      inning.innerHTML  = '1<sup>st</sup> Innings';
     }else if(innnum == "2"){
-      inning.innerHTML  = '2<sup>nd</sup> Inning';
+      inning.innerHTML  = '2<sup>nd</sup> Innings';
     }
   }else{
     inning.innerHTML  = 'Oneday Match';
@@ -107,6 +107,50 @@ nowinn.onSnapshot(function(doc) {
           let li = batting.querySelector('[data-id=' + change.doc.data().id + ']');
           batting.removeChild(li);
           renderPlayer(change.doc.data());
+        }
+    });
+});
+});
+
+
+//bowling
+var bowling = document.getElementById("bowling");
+
+function renderPlayerBowl(doc){
+  let liB = document.createElement('li');
+  let divnameball = document.createElement('div');
+  let divscoreball = document.createElement('div');
+
+  liB.setAttribute('class', 'row rounded-pill ball');
+  liB.setAttribute('data-id', doc.id);
+  divnameball.setAttribute('class', 'col-9 align-self-center nameball');
+  divnameball.textContent = doc.name;
+  divscoreball.setAttribute('class', 'col align-self-center pointsbat rounded-pill');
+  divscoreball.textContent = doc.balls;
+
+  liB.appendChild(divnameball);
+  liB.appendChild(divscoreball);
+
+  bowling.appendChild(liB);
+};
+
+nowinn.onSnapshot(function(doc) {
+  currentinn = doc.data().inn;
+  ballingNow = db.collection("bowling/inn" + currentinn + "/details").where("in", "==", true).limit(1);
+
+  ballingNow.onSnapshot(snapshot => {
+    let changes = snapshot.docChanges();
+    changes.forEach(change => {
+        console.log(change.doc.data());
+        if(change.type == 'added'){
+          renderPlayerBowl(change.doc.data());
+        } else if (change.type == 'removed'){
+          let liB = batting.querySelector('[data-id=' + change.doc.data().id + ']');
+          bowling.removeChild(li);
+        } else if (change.type == 'modified'){
+          let liB = batting.querySelector('[data-id=' + change.doc.data().id + ']');
+          bowling.removeChild(li);
+          renderPlayerBowl(change.doc.data());
         }
     });
 });

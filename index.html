@@ -23,10 +23,33 @@
   </head>
 
   <body>
-  
+<!--   
   <div class="topic">
     BATTLE OF MAROONS LIVE SCORE
-  </div>
+  </div> -->
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">BATTLE OF MAROONS LIVE SCORE</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Live <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Scoreboard</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Players</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">About</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
 
   <div class="imageholder">
     <img src="./assets/bgac.png" class="bg" id="bg" alt=""/>
@@ -39,10 +62,14 @@
         <div class="card-body">
           <h3 class="schoolname" id="school">School Name</h3>
           <p class="battext">Batting now</p>
-          
-          <!-- <i class="material-icons">hdr_weak</i> -->
+          <span class="onbutton">
+          <i class="material-icons">hdr_weak</i>
+          </span>
+          <span class="offbutton">
+          <i class="material-icons off">hdr_strong</i>
+          </span>
           <p class="inning" id="inning">
-            1<sup>st</sup> Inning
+            1<sup>st</sup> Innings
           </p>
         </div>
       </div>
@@ -107,29 +134,8 @@
     <div class="card-body">
       <div class="container">
         <div class="batting" id="batting">
-          <!-- <div class="row rounded-pill bat" >
-            <div class="col-9 align-self-center namebat">
-              Player1 Name
-            </div>
-            <div class="col align-self-center pointsbat rounded-pill" id="batsman1">
-              000
-            </div>
-          </div>
-          <div class="row rounded-pill bat">
-            <div class="col-9 align-self-center namebat">
-              Player2 Name
-            </div>
-            <div class="col align-self-center pointsbat rounded-pill">
-              000
-            </div>
-          </div> -->
-          <!-- <div class="row rounded-pill ball">
-            <div class="col-9 align-self-center nameball">
-              Bowling
-              <br>
-              Hasala Heyiyanthuduwa
-            </div>
-          </div> -->
+        </div>
+        <div class="batting" id="bowling">
         </div>
       </div>
     </div>

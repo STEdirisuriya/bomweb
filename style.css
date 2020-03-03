@@ -2,17 +2,15 @@ body{
   font-family: 'Roboto Condensed' ;
 }
 
-.topic{
+.navbar{
   background-color: #ececec;
   padding: 20px;
-  width: 100%;
   z-index: 2;
-  position: fixed;
 }
 
 .imageholder{
   display: inline-block;
-  /* clip-path: circle(100% at 34% -2%); */
+  clip-path: circle(100% at 50% 4%);
 }
 
 .bg{
@@ -36,7 +34,50 @@ body{
   font-size: 4.5vw;
 }
 
-.inning{  
+@keyframes onanim {
+  0% {opacity: 1;}
+  10% {opacity: 0.9;}
+  20% {opacity: 0.8;}
+  30% {opacity: 0.7;}
+  40% {opacity: 0.6;}
+  50% {opacity: 0.5;}
+  60% {opacity: 0.4;}
+  70% {opacity: 0.3;}
+  80% {opacity: 0.2;}
+  90% {opacity: 0.1;}
+  100% {opacity: 0;}
+}
+
+.onbutton{  
+  animation: onanim 0.5s infinite;
+  animation-direction: alternate;
+  position: absolute;
+  float: left;
+}
+
+@keyframes offanim {
+  0% {opacity: 0;}
+  10% {opacity: 0.1;}
+  20% {opacity: 0.2;}
+  30% {opacity: 0.3;}
+  40% {opacity: 0.4;}
+  50% {opacity: 0.5;}
+  60% {opacity: 0.6;}
+  70% {opacity: 0.7;}
+  80% {opacity: 0.8;}
+  90% {opacity: 0.9;}
+  100% {opacity: 1;}
+}
+
+.offbutton{  
+  animation: offanim 0.5s infinite;
+  animation-direction: alternate;
+  position: absolute;
+  float: left;
+}
+
+.inning{
+  margin-left: 30px;
 }
 
 .card-body{
@@ -95,12 +136,13 @@ body{
 
 .pointsbat{
   padding: 5px;
-  background-color: rgba(204, 60, 44, 0.8);
   text-align: center;
+  background-color: rgba(226, 80, 64, 0.8);
 }
 
 .ball{
-  margin-top: 20px;
+  margin-top: 20px;  
+  background-color: rgba(226, 80, 64, 0.8);
 }
 
 .footer{
@@ -110,6 +152,7 @@ body{
 
 .acicts{
   font-size: 4vw;
+  margin-left: 10%;
 }
 /* .inning{
     text-align: center;
