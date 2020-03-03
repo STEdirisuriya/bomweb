@@ -53,16 +53,18 @@ fullpoints.onSnapshot(function(doc) {
 
 var school = document.getElementById('school');
 var logo = document.getElementById('logo');
-
+var bg = document.getElementById('bg');
 var nowinn = db.collection("other").doc("nowinn");
 
 nowinn.onSnapshot(function(doc) {
   schoolname = doc.data().play;
   if(schoolname == 'ananda'){
     school.innerHTML = "Ananda College";
-    logo.src='./assets/Ananda.png';
+    bg.src = './assets/bgac.png'
+    logo.src ='./assets/Ananda.png';
   }else if(schoolname == 'nalanda'){
     school.innerHTML = "Nalanda College";
+    bg.src = './assets/bgnc.png'
     logo.src='./assets/Nalanda.png';
   }
 });
