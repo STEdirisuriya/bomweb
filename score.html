@@ -1,0 +1,119 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <!-- Other Css -->
+    <script src="https://www.gstatic.com/firebasejs/5.0.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.0.3/firebase-firestore.js"></script>
+    <link href="style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <title>
+      BOM LIVE SCORE 20
+    </title>
+
+  </head>
+
+  <body>
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">BOM LIVE SCORE 20</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="./index.html">Live <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./score.html">Scoreboard</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Players</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./about.html">About</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="imageholder">
+    <img src="./assets/bgac.png" class="bg" id="bg" alt=""/>
+  </div>
+
+
+  <div class="col-10 mx-auto position-absolute status">
+    <div class="card-body">
+      <div class="container">
+        <div class="card-body">
+          <h3 class="schoolname" id="school">School Name</h3>
+          <p class="battext">Batting now</p>
+          <span class="onbutton">
+          <i class="material-icons">hdr_weak</i>
+          </span>
+          <span class="offbutton">
+          <i class="material-icons off">hdr_strong</i>
+          </span>
+          <p class="inning" id="inning">
+            1<sup>st</sup> Innings
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card mx-auto shadow scoreboard">
+    <h2 class="col-10 mx-auto caption">Batting <br> Inn1 - Test Match</h2>
+    <h5><span id="inn1div" class="school"></span></h5>
+    <table class="table col-10 mx-auto align-self-center table-bordered">
+        <thead>
+          <tr >
+            <th class="col-5">Name</th>
+            <th class="col">Points</th>
+            <th class="col">Balls</th>
+            <th class="col">SR</th>
+          </tr>
+        </thead>
+        <tbody id="inn1">
+          <!-- <tr>
+            <td class="col">Supun Tharinda</td>
+            <td class="col">125</td>
+            <td class="col">56</td>
+            <td class="col">56.35</td>
+          </tr> -->
+        </tbody>
+      </table>
+  </div>
+
+  <div class="footer fixed-bottom">
+    <div class="card-body">
+      <div class="container">
+        <div class="row">
+          <div class="col-3 align-self-center">
+            <img src="./assets/acicts.png" class="img-fluid" alt="">
+          </div>
+          <div class="col align-self-center acicts">
+            Project By ACICTS
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="score.js"></script>
+</body>
+
+</html>

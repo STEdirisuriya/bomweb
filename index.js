@@ -12,6 +12,27 @@ firebase.initializeApp(config);
 const db = firebase.firestore();
 db.settings({ timestampsInSnapshots: true }); 
 
+//now inn(schoolname, inningtype)
+
+var school = document.getElementById('school');
+var logo = document.getElementById('logo');
+var bg = document.getElementById('bg');
+var nowinn = db.collection("other").doc("nowinn");
+
+nowinn.onSnapshot(function(doc) {
+  schoolname = doc.data().play;
+  if(schoolname == 'ananda'){
+    school.innerHTML = "Ananda College";
+    bg.src = './assets/bgac.png'
+    logo.src ='./assets/Ananda.png';
+  }else if(schoolname == 'nalanda'){
+    school.innerHTML = "Nalanda College";
+    bg.src = './assets/bgnc.png'
+    logo.src='./assets/Nalanda.png';
+  }
+});
+
+
 //Live score(score, overs & balls, extras, inning)
 
 var livescore = document.getElementById('livescore');
@@ -49,26 +70,6 @@ fullpoints.onSnapshot(function(doc) {
   legbyes.innerHTML = doc.data().legbyes;
 });
 
-//now inn(schoolname, inningtype)
-
-var school = document.getElementById('school');
-var logo = document.getElementById('logo');
-var bg = document.getElementById('bg');
-var nowinn = db.collection("other").doc("nowinn");
-
-nowinn.onSnapshot(function(doc) {
-  schoolname = doc.data().play;
-  if(schoolname == 'ananda'){
-    school.innerHTML = "Ananda College";
-    bg.src = './assets/bgac.png'
-    logo.src ='./assets/Ananda.png';
-  }else if(schoolname == 'nalanda'){
-    school.innerHTML = "Nalanda College";
-    bg.src = './assets/bgnc.png'
-    logo.src='./assets/Nalanda.png';
-  }
-});
-
 //batting
 var batting = document.getElementById("batting");
 
@@ -97,7 +98,6 @@ nowinn.onSnapshot(function(doc) {
   battingnow.onSnapshot(snapshot => {
     let changes = snapshot.docChanges();
     changes.forEach(change => {
-        console.log(change.doc.data());
         if(change.type == 'added'){
           renderPlayer(change.doc.data());
         } else if (change.type == 'removed'){
@@ -141,7 +141,6 @@ nowinn.onSnapshot(function(doc) {
   ballingNow.onSnapshot(snapshot => {
     let changes = snapshot.docChanges();
     changes.forEach(change => {
-        console.log(change.doc.data());
         if(change.type == 'added'){
           renderPlayerBowl(change.doc.data());
         } else if (change.type == 'removed'){
@@ -155,85 +154,3 @@ nowinn.onSnapshot(function(doc) {
     });
 });
 });
-//   battingnow.onSnapshot(function(querySnapshot) {
-//       var players = [];
-//       querySnapshot.forEach(function(doc) {
-//         //var players = players.push(doc.data().name);
-//             //console.log(change.doc.data());
-//             // //renderPlayers(doc.data().name);
-//             // if(doc.data().in == 'true'){
-//               renderCafe(doc.data());
-//             // } else if (change.type == 'removed'){
-//             //     // let li = cafeList.querySelector('[data-id=' + change.doc.id + ']');
-//             //     // cafeList.removeChild(li);
-//             // }
-              
-
-//             function renderCafe(doc){
-//               var playerArr;
-                  
-//               playerArr += '<div class="row rounded-pill bat">';
-//               playerArr += '<div class="col-9 align-self-center namebat">';
-//               playerArr += doc.name;
-//               playerArr += '</div>';
-//               playerArr += '<div class="col align-self-center pointsbat rounded-pill">';
-//               playerArr += 50;
-//               playerArr += '</div>';
-//               playerArr += '</div>';
-      
-//               batting.innerHTML += playerArr;
-//             }
-//               // let name = document.createElement('span');
-//               // // let city = document.createElement('span');
-//               // // let cross = document.createElement('div');
-            
-//               // //li.setAttribute('data-id', doc.name);
-//               // name.textContent = doc;
-//               // //city.textContent = doc.data().city;
-//               // //cross.textContent = 'x';
-            
-//               // li.appendChild(name);
-//               // // li.appendChild(city);
-//               // // li.appendChild(cross);
-            
-              
-            
-//             // }
-          
-//       });
-      
-      
-//       //console.log("Current players: ", players.join(", "));
-//   });
-// });
-
-
-// battingnow = db.collection("batting").doc("inn1/players/nen3QW3BhhTGqkZ1TCfW");
-// var batting = document.getElementById('batting');
-// //console.log("playinn "+  nowinn);
-
-// battingnow.onSnapshot(function(doc) {
-//   battingtext = doc.data().in;
-//   console.log(battingtext);
-//   // if(schoolname == 'ananda'){
-//   //   school.innerHTML = "Ananda College";
-//   //   logo.src='./assets/Ananda.png';
-//   // }else if(schoolname == 'nalanda'){
-//   //   school.innerHTML = "Nalanda College";
-//   //   logo.src='./assets/Nalanda.png';
-//   // }
-//   // playinn = doc.data().inn;
-// } 
-// );
-// nowinn.where("population", ">", 100000).orderBy("population").limit(2).onSnapshot(function(doc) {
-//   schoolname = doc.data().play;
-//   if(schoolname == 'ananda'){
-//     school.innerHTML = "Ananda College";
-//     logo.src='./assets/Ananda.png';
-//   }else if(schoolname == 'nalanda'){
-//     school.innerHTML = "Nalanda College";
-//     logo.src='./assets/Nalanda.png';
-//   }
-//   playinn = doc.data().inn;
-// } 
-// );
