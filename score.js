@@ -49,7 +49,7 @@ innschool.onSnapshot(function (doc) {
   } else if (doc.data().inn1 == 'nalanda') {
     inn1div.innerHTML = 'Nalanda College';
   } else {
-    inn1div.innerHTML = 'This inning is not played';
+    inn1div.innerHTML = 'Still not played';
   }
 
   if (doc.data().inn2 == 'ananda') {
@@ -57,7 +57,7 @@ innschool.onSnapshot(function (doc) {
   } else if (doc.data().inn2 == 'nalanda') {
     inn2div.innerHTML = 'Nalanda College';
   } else {
-    inn2div.innerHTML = 'This inning is not played';
+    inn2div.innerHTML = 'Still not played';
   }
 
   if (doc.data().inn3 == 'ananda') {
@@ -65,7 +65,7 @@ innschool.onSnapshot(function (doc) {
   } else if (doc.data().inn3 == 'nalanda') {
     inn3div.innerHTML = 'Nalanda College';
   } else {
-    inn3div.innerHTML = 'This inning is not played';
+    inn3div.innerHTML = 'Still not played';
   }
 
   if (doc.data().inn4 == 'ananda') {
@@ -73,7 +73,7 @@ innschool.onSnapshot(function (doc) {
   } else if (doc.data().inn4 == 'nalanda') {
     inn4div.innerHTML = 'Nalanda College';
   } else {
-    inn4div.innerHTML = 'This inning is not played';
+    inn4div.innerHTML = 'Still not played';
   }
 
   if (doc.data().inn5 == 'ananda') {
@@ -81,7 +81,7 @@ innschool.onSnapshot(function (doc) {
   } else if (doc.data().inn5 == 'nalanda') {
     inn5div.innerHTML = 'Nalanda College';
   } else {
-    inn5div.innerHTML = 'This inning is not played';
+    inn5div.innerHTML = 'Still not played';
   }
 
   if (doc.data().inn6 == 'ananda') {
@@ -89,7 +89,7 @@ innschool.onSnapshot(function (doc) {
   } else if (doc.data().inn6 == 'nalanda') {
     inn6div.innerHTML = 'Nalanda College';
   } else {
-    inn6div.innerHTML = 'This inning is not played';
+    inn6div.innerHTML = 'Still not played';
   }
 });
 
@@ -101,7 +101,7 @@ innschool.onSnapshot(function (doc) {
   }else if(doc.data().inn1 == 'ananda'){
     inn1divB.innerHTML = 'Nalanda College';
   }else{
-    inn1divB.innerHTML = 'This inning is not played';
+    inn1divB.innerHTML = 'Still not played';
   }
 
   if(doc.data().inn2 == 'nalanda'){
@@ -109,7 +109,7 @@ innschool.onSnapshot(function (doc) {
   }else if(doc.data().inn2 == 'ananda'){
     inn2divB.innerHTML = 'Nalanda College';
   }else{
-    inn2divB.innerHTML = 'This inning is not played';
+    inn2divB.innerHTML = 'Still not played';
   }
 
   if(doc.data().inn3 == 'nalanda'){
@@ -117,7 +117,7 @@ innschool.onSnapshot(function (doc) {
   }else if(doc.data().inn3 == 'ananda'){
     inn3divB.innerHTML = 'Nalanda College';
   }else{
-    inn3divB.innerHTML = 'This inning is not played';
+    inn3divB.innerHTML = 'Still not played';
   }
 
   if(doc.data().inn4 == 'nalanda'){
@@ -125,7 +125,7 @@ innschool.onSnapshot(function (doc) {
   }else if(doc.data().inn4 == 'ananda'){
     inn4divB.innerHTML = 'Nalanda College';
   }else{
-    inn4divB.innerHTML = 'This inning is not played';
+    inn4divB.innerHTML = 'Still not played';
   }
 
   if(doc.data().inn5 == 'nalanda'){
@@ -133,7 +133,7 @@ innschool.onSnapshot(function (doc) {
   }else if(doc.data().inn5 == 'ananda'){
     inn5divB.innerHTML = 'Nalanda College';
   }else{
-    inn5divB.innerHTML = 'This inning is not played';
+    inn5divB.innerHTML = 'Still not played';
   }
 
   if (doc.data().inn6 == 'nalanda') {
@@ -141,7 +141,7 @@ innschool.onSnapshot(function (doc) {
   } else if (doc.data().inn6 == 'ananda') {
     inn6divB.innerHTML = 'Nalanda College';
   } else {
-    inn6divB.innerHTML = 'This inning is not played';
+    inn6divB.innerHTML = 'Still not played';
   }
 });
 

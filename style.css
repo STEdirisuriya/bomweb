@@ -10,7 +10,6 @@ body{
 }
 
 .imageholder{
-  display: inline-block;
   clip-path: circle(100% at 50% 4%);
 }
 
@@ -134,6 +133,10 @@ body{
   margin-left: 10px;
 }
 
+.astr{
+  text-align: left;
+}
+
 .pointsbat{
   padding: 5px;
   text-align: center;
@@ -144,6 +147,12 @@ body{
   margin-top: 20px;  
   background-color: rgba(226, 80, 64, 0.8);
 }
+
+.nameball{
+  padding: 5px;
+  margin-left: 10px;
+}
+
 
 .footer{
   background-color: maroon;
@@ -167,7 +176,7 @@ body{
 
 .bgacicts{
   width: 100%;
-  margin-top: -10%;
+  margin: 0px auto;
   z-index: -1;
 }
 
@@ -187,13 +196,6 @@ body{
 }
 
 /* Scoreboard */
-.imageholder2{
-  display: inline-block;
-}
-
-.onedaytxt{
-  
-}
 
 .bg2{
   width: 100%;
@@ -251,4 +253,8 @@ body{
 .table{
   white-space: nowrap;
   width: 100%;
+}
+
+.extrastable{
+  margin-left: 20%;
 }

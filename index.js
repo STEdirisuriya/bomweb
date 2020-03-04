@@ -81,7 +81,11 @@ function renderPlayer(doc){
   li.setAttribute('class', 'row rounded-pill bat');
   li.setAttribute('data-id', doc.id);
   divname.setAttribute('class', 'col-9 align-self-center namebat');
-  divname.textContent = doc.name;
+  if(doc.nowplay){
+    divname.textContent = doc.name + '*';
+  }else{
+    divname.textContent = doc.name;
+  }
   divscore.setAttribute('class', 'col align-self-center pointsbat rounded-pill');
   divscore.textContent = doc.points;
 
@@ -119,17 +123,13 @@ var bowling = document.getElementById("bowling");
 function renderPlayerBowl(doc){
   let liB = document.createElement('li');
   let divnameball = document.createElement('div');
-  let divscoreball = document.createElement('div');
 
   liB.setAttribute('class', 'row rounded-pill ball');
   liB.setAttribute('data-id', doc.id);
   divnameball.setAttribute('class', 'col-9 align-self-center nameball');
   divnameball.textContent = doc.name;
-  divscoreball.setAttribute('class', 'col align-self-center pointsbat rounded-pill');
-  divscoreball.textContent = doc.balls;
 
   liB.appendChild(divnameball);
-  liB.appendChild(divscoreball);
 
   bowling.appendChild(liB);
 };
