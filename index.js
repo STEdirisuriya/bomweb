@@ -43,20 +43,27 @@ var noballs = document.getElementById('noballs');
 var byes = document.getElementById('byes');
 var legbyes = document.getElementById('legbyes');
 var inning = document.getElementById('inning');
+var liveanim = document.getElementById("liveanim");
 
 var fullpoints = db.collection("other").doc("fullpoints");
 
 fullpoints.onSnapshot(function(doc) {
   testmatch = doc.data().testmatch;
   innnum = doc.data().inn;
+  live = doc.data().live;
   if(testmatch){
     if(innnum == "1"){
-      inning.innerHTML  = '1<sup>st</sup> Innings';
+        inning.innerHTML  = '1<sup>st</sup> Innings';
     }else if(innnum == "2"){
       inning.innerHTML  = '2<sup>nd</sup> Innings';
     }
   }else{
     inning.innerHTML  = 'Oneday Match';
+  }
+  if(live == true){
+    liveanim.style.display = 'inline-block';
+  }else{
+    liveanim.style.display = 'none';
   }
   livescore.innerHTML = doc.data().points + ' / ' + doc.data().wickets;
   scorenum = doc.data().points;

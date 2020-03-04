@@ -49,7 +49,7 @@
     </div>
   </nav>
 
-    <img src="./assets/bgac.png" class="bg2" id="bg" alt="" />
+  <img src="./assets/bgac.png" class="bg2" id="bg" alt="" />
 
   <div class="col-10 mx-auto position-absolute status">
     <div class="card-body">
@@ -57,15 +57,19 @@
         <div class="card-body">
           <h3 class="schoolname" id="school">School Name</h3>
           <p class="battext">Batting now</p>
-          <span class="onbutton">
-            <i class="material-icons">hdr_weak</i>
-          </span>
-          <span class="offbutton">
-            <i class="material-icons off">hdr_strong</i>
-          </span>
           <p class="inning" id="inning">
             1<sup>st</sup> Innings
           </p>
+          
+        <span id="liveanim">
+          | Live&nbsp 
+        <span class="onbutton">
+        <i class="material-icons">hdr_weak</i>
+        </span>
+        <span class="offbutton">
+        <i class="material-icons off">hdr_strong</i>
+        </span>
+        </span>
         </div>
       </div>
     </div>
@@ -113,6 +117,9 @@
           aria-controls="pills-inn6" aria-selected="false">Oneday Match II</a>
       </li>
     </ul>
+
+    <h6 class="testmatchwondiv" id="testmatchwondiv"></h6>
+    <h6 class="onedaymatchwondiv" id="onedaymatchwondiv"></h6>
   </div>
   <div class="card col mx-auto border-white scoreboard">
     <div class="tab-content" id="pills-tabContent">
@@ -173,6 +180,31 @@
           </table>
         </div>
         <!--  -->
+        <div class="caption">
+          <h5 class="col-10 mx-auto">Extras</h5>
+        </div>
+        <div class="scoretable">
+          <table class="table table-hover col-6 mx-auto justify-content-center table-bordered">
+            <thead>
+              <tr>
+                <th class="col">Wides</th>
+                <th class="col">No Balls</th>
+                <th class="col">Byes</th>
+                <th class="col">Leg Byes</th>
+                <th class="col">Penalty</th>
+              </tr>
+            </thead>
+            <tbody>
+              <td id="inn1WD"></td>
+              <td id="inn1NB"></td>
+              <td id="inn1BY"></td>
+              <td id="inn1LB"></td>
+              <td id="inn1PE"></td>
+
+            </tbody>
+
+          </table>
+        </div>
       </div>
       <div class="tab-pane fade" id="pills-inn2" role="tabpanel" aria-labelledby="pills-inn2-tab">
         <div class="caption">
@@ -201,7 +233,7 @@
             </tbody>
           </table>
         </div>
-        
+
         <!--  -->
         <div class="caption">
           <h5 class="col-10 mx-auto">Bowling</h5>
@@ -232,6 +264,31 @@
           </table>
         </div>
         <!--  -->
+        <div class="caption">
+          <h5 class="col-10 mx-auto">Extras</h5>
+        </div>
+        <div class="scoretable">
+          <table class="table table-hover col-6 mx-auto justify-content-center table-bordered">
+            <thead>
+              <tr>
+                <th class="col">Wides</th>
+                <th class="col">No Balls</th>
+                <th class="col">Byes</th>
+                <th class="col">Leg Byes</th>
+                <th class="col">Penalty</th>
+              </tr>
+            </thead>
+            <tbody>
+              <td id="inn2WD"></td>
+              <td id="inn2NB"></td>
+              <td id="inn2BY"></td>
+              <td id="inn2LB"></td>
+              <td id="inn2PE"></td>
+
+            </tbody>
+
+          </table>
+        </div>
       </div>
       <div class="tab-pane fade" id="pills-inn3" role="tabpanel" aria-labelledby="pills-inn3-tab">
         <div class="caption">
@@ -290,6 +347,31 @@
           </table>
         </div>
         <!--  -->
+        <div class="caption">
+          <h5 class="col-10 mx-auto">Extras</h5>
+        </div>
+        <div class="scoretable">
+          <table class="table table-hover col-6 mx-auto justify-content-center table-bordered">
+            <thead>
+              <tr>
+                <th class="col">Wides</th>
+                <th class="col">No Balls</th>
+                <th class="col">Byes</th>
+                <th class="col">Leg Byes</th>
+                <th class="col">Penalty</th>
+              </tr>
+            </thead>
+            <tbody>
+              <td id="inn3WD"></td>
+              <td id="inn3NB"></td>
+              <td id="inn3BY"></td>
+              <td id="inn3LB"></td>
+              <td id="inn3PE"></td>
+
+            </tbody>
+
+          </table>
+        </div>
       </div>
       <div class="tab-pane fade" id="pills-inn4" role="tabpanel" aria-labelledby="pills-inn4-tab">
         <div class="caption">
@@ -318,8 +400,8 @@
             </tbody>
           </table>
         </div>
-         <!--  -->
-         <div class="caption">
+        <!--  -->
+        <div class="caption">
           <h5 class="col-10 mx-auto">Bowling</h5>
         </div>
         <h5>
@@ -348,6 +430,31 @@
           </table>
         </div>
         <!--  -->
+        <div class="caption">
+          <h5 class="col-10 mx-auto">Extras</h5>
+        </div>
+        <div class="scoretable">
+          <table class="table table-hover col-6 mx-auto justify-content-center table-bordered">
+            <thead>
+              <tr>
+                <th class="col">Wides</th>
+                <th class="col">No Balls</th>
+                <th class="col">Byes</th>
+                <th class="col">Leg Byes</th>
+                <th class="col">Penalty</th>
+              </tr>
+            </thead>
+            <tbody>
+              <td id="inn4WD"></td>
+              <td id="inn4NB"></td>
+              <td id="inn4BY"></td>
+              <td id="inn4LB"></td>
+              <td id="inn4PE"></td>
+
+            </tbody>
+
+          </table>
+        </div>
       </div>
       <div class="tab-pane fade" id="pills-inn5" role="tabpanel" aria-labelledby="pills-inn5-tab">
         <div class="caption">
@@ -364,7 +471,7 @@
         </span>
         <div class="scoretable">
           <table class="table table-hover col-10 mx-auto align-self-center table-bordered">
-            <thead> 
+            <thead>
               <tr>
                 <th class="col-5">Name</th>
                 <th class="col">Runs</th>
@@ -376,8 +483,8 @@
             </tbody>
           </table>
         </div>
-         <!--  -->
-         <div class="caption">
+        <!--  -->
+        <div class="caption">
           <h5 class="col-10 mx-auto">Bowling</h5>
         </div>
         <h5>
@@ -406,6 +513,31 @@
           </table>
         </div>
         <!--  -->
+        <div class="caption">
+          <h5 class="col-10 mx-auto">Extras</h5>
+        </div>
+        <div class="scoretable">
+          <table class="table table-hover col-6 mx-auto justify-content-center table-bordered">
+            <thead>
+              <tr>
+                <th class="col">Wides</th>
+                <th class="col">No Balls</th>
+                <th class="col">Byes</th>
+                <th class="col">Leg Byes</th>
+                <th class="col">Penalty</th>
+              </tr>
+            </thead>
+            <tbody>
+              <td id="inn5WD"></td>
+              <td id="inn5NB"></td>
+              <td id="inn5BY"></td>
+              <td id="inn5LB"></td>
+              <td id="inn5PE"></td>
+
+            </tbody>
+
+          </table>
+        </div>
       </div>
       <div class="tab-pane fade" id="pills-inn6" role="tabpanel" aria-labelledby="pills-inn6-tab">
         <div class="caption">
@@ -435,8 +567,8 @@
 
           </table>
         </div>
-         <!--  -->
-         <div class="caption">
+        <!--  -->
+        <div class="caption">
           <h5 class="col-10 mx-auto">Bowling</h5>
         </div>
         <h5>
@@ -468,61 +600,56 @@
         <div class="caption">
           <h5 class="col-10 mx-auto">Extras</h5>
         </div>
-        <span class="arrowtable">
-          <i class="material-icons">
-            arrow_right_alt
-          </i>
-        </span>
         <div class="scoretable">
           <table class="table table-hover col-6 mx-auto justify-content-center table-bordered">
             <thead>
               <tr>
-                <th class="col">Wides</th>                
+                <th class="col">Wides</th>
                 <th class="col">No Balls</th>
                 <th class="col">Byes</th>
                 <th class="col">Leg Byes</th>
                 <th class="col">Penalty</th>
               </tr>
             </thead>
-            <tbody id="inn6B">
-              <td class="">06</td>
-              <td class="">06</td>
-              <td class="">06</td>
-              <td class="">06</td>
-              <td class="">06</td>
+            <tbody>
+              <td id="inn6WD"></td>
+              <td id="inn6NB"></td>
+              <td id="inn6BY"></td>
+              <td id="inn6LB"></td>
+              <td id="inn6PE"></td>
 
             </tbody>
 
           </table>
+        </div>
       </div>
     </div>
-  </div>
 
-  <div class="footer fixed-bottom">
-    <div class="card-body">
-      <div class="container">
-        <div class="row">
-          <div class="col-3 align-self-center">
-            <img src="./assets/acicts.png" class="img-fluid" alt="">
-          </div>
-          <div class="col align-self-center acicts">
-            Project By ACICTS
+    <div class="footer fixed-bottom">
+      <div class="card-body">
+        <div class="container">
+          <div class="row">
+            <div class="col-3 align-self-center">
+              <img src="./assets/acicts.png" class="img-fluid" alt="">
+            </div>
+            <div class="col align-self-center acicts">
+              Project By ACICTS
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
 
-  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
-  </script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
-  </script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
-  </script>
-  <script src="score.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+    </script>
+    <script src="score.js"></script>
 </body>
 
 </html>

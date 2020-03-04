@@ -76,7 +76,7 @@ body{
 }
 
 .inning{
-  margin-left: 30px;
+  display: inline-block;
 }
 
 .card-body{
@@ -207,6 +207,7 @@ body{
   margin-top: -50%;
   margin-bottom: 20%;
 }
+
 .inningsselect{
   margin-top: 10px
 }
@@ -223,7 +224,20 @@ body{
   text-align: center;
 }
 
-.tab-content{
+.testmatchwondiv{
+  text-align: center;
+  padding: 5px;
+  background-color: rgb(235, 235, 235);
+  color: maroon;
+  font-size: 80%;
+}
+
+.onedaymatchwondiv{
+  text-align: center;
+  padding: 5px;
+  background-color: rgb(235, 235, 235);
+  color: maroon;
+  font-size: 80%;
 }
 
 .scoreboard{

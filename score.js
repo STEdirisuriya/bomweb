@@ -31,6 +31,51 @@ nowinn.onSnapshot(function (doc) {
   }
 });
 
+//Live score(score, overs & balls, extras, inning)
+
+var inning = document.getElementById('inning');
+var liveanim = document.getElementById("liveanim");
+var testmatchwondiv = document.getElementById("testmatchwondiv");
+var onedaymatchwondiv = document.getElementById("onedaymatchwondiv");
+
+var fullpoints = db.collection("other").doc("fullpoints");
+
+fullpoints.onSnapshot(function(doc) {
+  testmatch = doc.data().testmatch;
+  testmatchwon = doc.data().testmatchwon;
+  onedaymatchwon = doc.data().onedaymatchwon;
+
+  innnum = doc.data().inn;
+  live = doc.data().live;
+  if(testmatch){
+    if(innnum == "1"){
+        inning.innerHTML  = '1<sup>st</sup> Innings';
+    }else if(innnum == "2"){
+      inning.innerHTML  = '2<sup>nd</sup> Innings';
+    }
+  }else{
+    inning.innerHTML  = 'Oneday Match';
+  }
+  if(live == true){
+    liveanim.style.display = 'inline-block';
+  }else{
+    liveanim.style.display = 'none';
+  }
+
+  if(testmatchwon != ""){   
+    testmatchwondiv.style.display = 'block';
+    testmatchwondiv.innerHTML = testmatchwon;
+  }else{    
+    testmatchwondiv.style.display = 'none';  
+  }
+  if(onedaymatchwon != ""){
+    onedaymatchwondiv.style.display = 'block';
+    onedaymatchwondiv.innerHTML = onedaymatchwon;   
+  }else{    
+    onedaymatchwondiv.style.display = 'none'; 
+  }
+});
+
 //take inn played schools
 
 var inn1div = document.getElementById('inn1div');
@@ -763,3 +808,98 @@ boardbatinn6B.onSnapshot(snapshot => {
     }
   });
 });
+
+
+//extras
+
+var inn1WD = document.getElementById('inn1WD');
+var inn1NB = document.getElementById('inn1NB');
+var inn1BY = document.getElementById('inn1BY');
+var inn1LB = document.getElementById('inn1LB');
+var inn1PE = document.getElementById('inn1PE');
+
+var inn2WD = document.getElementById('inn2WD');
+var inn2NB = document.getElementById('inn2NB');
+var inn2BY = document.getElementById('inn2BY');
+var inn2LB = document.getElementById('inn2LB');
+var inn2PE = document.getElementById('inn2PE');
+
+var inn3WD = document.getElementById('inn3WD');
+var inn3NB = document.getElementById('inn3NB');
+var inn3BY = document.getElementById('inn3BY');
+var inn3LB = document.getElementById('inn3LB');
+var inn3PE = document.getElementById('inn3PE');
+
+var inn4WD = document.getElementById('inn4WD');
+var inn4NB = document.getElementById('inn4NB');
+var inn4BY = document.getElementById('inn4BY');
+var inn4LB = document.getElementById('inn4LB');
+var inn4PE = document.getElementById('inn4PE');
+
+var inn5WD = document.getElementById('inn5WD');
+var inn5NB = document.getElementById('inn5NB');
+var inn5BY = document.getElementById('inn5BY');
+var inn5LB = document.getElementById('inn5LB');
+var inn5PE = document.getElementById('inn5PE');
+
+
+var inn6WD = document.getElementById('inn6WD');
+var inn6NB = document.getElementById('inn6NB');
+var inn6BY = document.getElementById('inn6BY');
+var inn6LB = document.getElementById('inn6LB');
+var inn6PE = document.getElementById('inn6PE');
+
+var extrasinn1 = db.collection("extras/inn1/details").doc("extra");
+var extrasinn2 = db.collection("extras/inn2/details").doc("extra");
+var extrasinn3 = db.collection("extras/inn3/details").doc("extra");
+var extrasinn4 = db.collection("extras/inn4/details").doc("extra");
+var extrasinn5 = db.collection("extras/inn5/details").doc("extra");
+var extrasinn6 = db.collection("extras/inn6/details").doc("extra");
+
+extrasinn1.onSnapshot(function (doc) {
+  inn1WD.innerHTML = doc.data().wides;
+  inn1NB.innerHTML = doc.data().noballs;
+  inn1BY.innerHTML = doc.data().byes;
+  inn1LB.innerHTML = doc.data().legbyes;
+  inn1PE.innerHTML = doc.data().penalty;
+});
+
+// extrasinn2.onSnapshot(function (doc) {
+//   inn2WD = doc.data().wides;
+//   inn2NB = doc.data().noballs;
+//   inn2BY = doc.data().byes;
+//   inn2LB = doc.data().legbyes;
+//   inn2PE = doc.data().penalty;
+// });
+
+// extrasinn3.onSnapshot(function (doc) {
+//   inn3WD = doc.data().wides;
+//   inn3NB = doc.data().noballs;
+//   inn3BY = doc.data().byes;
+//   inn3LB = doc.data().legbyes;
+//   inn3PE = doc.data().penalty;
+// });
+
+// extrasinn4.onSnapshot(function (doc) {
+//   inn4WD = doc.data().wides;
+//   inn4NB = doc.data().noballs;
+//   inn4BY = doc.data().byes;
+//   inn4LB = doc.data().legbyes;
+//   inn4PE = doc.data().penalty;
+// });
+
+// extrasinn5.onSnapshot(function (doc) {
+//   inn5WD = doc.data().wides;
+//   inn5NB = doc.data().noballs;
+//   inn5BY = doc.data().byes;
+//   inn5LB = doc.data().legbyes;
+//   inn5PE = doc.data().penalty;
+// });
+
+// extrasinn6.onSnapshot(function (doc) {
+//   inn6WD = doc.data().wides;
+//   inn6NB = doc.data().noballs;
+//   inn6BY = doc.data().byes;
+//   inn6LB = doc.data().legbyes;
+//   inn6PE = doc.data().penalty;
+// });
