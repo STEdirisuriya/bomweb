@@ -88,24 +88,24 @@
         </div>
       </div>
     </div>
-    
+
     <ul class="nav nav-pills nav-fill mb-3 mx-auto inningsselect" id="pills-tab" role="tablist">
-      
+
       <li class="nav-item">
-        <a class="nav-link btn-light active " id="pills-inn1-tab" style="margin-left: 5px;" data-toggle="pill" href="#pills-inn1" role="tab"
-          aria-controls="pills-inn1" aria-selected="true">A</a>
+        <a class="nav-link btn-light active " id="pills-inn1-tab" style="margin-left: 5px;" data-toggle="pill"
+          href="#pills-inn1" role="tab" aria-controls="pills-inn1" aria-selected="true">A</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link btn-light" id="pills-inn2-tab" style="margin-right: 5px;" data-toggle="pill" href="#pills-inn2" role="tab"
-          aria-controls="pills-inn2" aria-selected="false">B</a>
+        <a class="nav-link btn-light" id="pills-inn2-tab" style="margin-right: 5px;" data-toggle="pill"
+          href="#pills-inn2" role="tab" aria-controls="pills-inn2" aria-selected="false">B</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link btn-light" id="pills-inn3-tab" style="margin-left: 5px;" data-toggle="pill" href="#pills-inn3" role="tab"
-          aria-controls="pills-inn3" aria-selected="false">A</a>
+        <a class="nav-link btn-light" id="pills-inn3-tab" style="margin-left: 5px;" data-toggle="pill"
+          href="#pills-inn3" role="tab" aria-controls="pills-inn3" aria-selected="false">A</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link btn-light" id="pills-inn4-tab" style="margin-right: 5px;" data-toggle="pill" href="#pills-inn4" role="tab"
-          aria-controls="pills-inn4" aria-selected="true">B</a>
+        <a class="nav-link btn-light" id="pills-inn4-tab" style="margin-right: 5px;" data-toggle="pill"
+          href="#pills-inn4" role="tab" aria-controls="pills-inn4" aria-selected="true">B</a>
       </li>
       <li class="col nav-item align-self-center" style="margin-top: 10px;">
         <a class="nav-link btn-light" id="pills-inn5-tab" data-toggle="pill" href="#pills-inn5" role="tab"
@@ -117,12 +117,12 @@
       </li>
     </ul>
   </div>
-    <div class="card col mx-auto border-white scoreboard">
+  <div class="card col mx-auto border-white scoreboard">
     <div class="tab-content" id="pills-tabContent">
       <div class="tab-pane fade show active" id="pills-inn1" role="tabpanel" aria-labelledby="pills-inn1-tab">
         <div class="caption">
-          <h3 class="col-10 mx-auto">Inn1 - Test Match</h3>
-          <h4 class="col-10 mx-auto">Batting</h4>
+          <h4 class="col-10 mx-auto">Test Match - 1<sup>st</sup> Innings</h4>
+          <h5 class="col-10 mx-auto">Batting</h5>
         </div>
         <h5>
           <div id="inn1div" class="col-10 mx-auto school">School Name</div>
@@ -133,34 +133,57 @@
           </i>
         </span>
         <div class="scoretable">
-
           <table class="table col-10 mx-auto align-self-center table-bordered">
             <thead>
               <tr>
                 <th class="col-5">Name</th>
-                <th class="col">Points</th>
+                <th class="col">Runs</th>
                 <th class="col">Balls</th>
                 <th class="col">SR</th>
               </tr>
             </thead>
             <tbody id="inn1">
-              <!-- <tr>
-                <td class="col">Supun Tharinda</td>
-                <td class="col">125</td>
-                <td class="col">56</td>
-                <td class="col">56.35</td>
-              </tr> -->
             </tbody>
           </table>
         </div>
+        <!--  -->
+        <div class="caption">
+          <h5 class="col-10 mx-auto">Bowling</h5>
+        </div>
+        <h5>
+          <div id="inn1divB" class="col-10 mx-auto school">School Name</div>
+        </h5>
+        <span class="arrowtable">
+          <i class="material-icons">
+            arrow_right_alt
+          </i>
+        </span>
+        <div class="scoretable">
+          <table class="table col-10 mx-auto align-self-center table-bordered">
+            <thead>
+              <tr>
+                <th class="col-5">Name</th>
+                <th class="col">Overs</th>
+                <th class="col">Maiden</th>
+                <th class="col">Runs</th>
+                <th class="col">Wickets</th>
+                <th class="col">Econ.</th>
+              </tr>
+            </thead>
+            <tbody id="inn1B">
+            </tbody>
+
+          </table>
+        </div>
+        <!--  -->
       </div>
       <div class="tab-pane fade" id="pills-inn2" role="tabpanel" aria-labelledby="pills-inn2-tab">
         <div class="caption">
-          <h2 class="col-10 mx-auto">Inn1 - Test Match</h2>
-          <h4 class="col-10 mx-auto">Batting</h4>
+          <h4 class="col-10 mx-auto">Test Match - 1<sup>st</sup> Innings</h4>
+          <h5 class="col-10 mx-auto">Batting</h5>
         </div>
         <h5>
-          <div id="inn1div" class="col-10 mx-auto school">School Name</div>
+          <div id="inn2div" class="col-10 mx-auto school">School Name</div>
         </h5>
         <span class="arrowtable">
           <i class="material-icons">
@@ -172,29 +195,54 @@
             <thead>
               <tr>
                 <th class="col-5">Name</th>
-                <th class="col">Points</th>
+                <th class="col">Runs</th>
                 <th class="col">Balls</th>
                 <th class="col">SR</th>
               </tr>
             </thead>
-            <tbody id="inn1">
-              <!-- <tr>
-                <td class="col">Supun Tharinda</td>
-                <td class="col">125</td>
-                <td class="col">56</td>
-                <td class="col">56.35</td>
-              </tr> -->
+            <tbody id="inn2">
             </tbody>
           </table>
         </div>
+        
+        <!--  -->
+        <div class="caption">
+          <h5 class="col-10 mx-auto">Bowling</h5>
+        </div>
+        <h5>
+          <div id="inn2divB" class="col-10 mx-auto school">School Name</div>
+        </h5>
+        <span class="arrowtable">
+          <i class="material-icons">
+            arrow_right_alt
+          </i>
+        </span>
+        <div class="scoretable">
+          <table class="table col-10 mx-auto align-self-center table-bordered">
+            <thead>
+              <tr>
+                <th class="col-5">Name</th>
+                <th class="col">Overs</th>
+                <th class="col">Maiden</th>
+                <th class="col">Runs</th>
+                <th class="col">Wickets</th>
+                <th class="col">Econ.</th>
+              </tr>
+            </thead>
+            <tbody id="inn2B">
+            </tbody>
+
+          </table>
+        </div>
+        <!--  -->
       </div>
       <div class="tab-pane fade" id="pills-inn3" role="tabpanel" aria-labelledby="pills-inn3-tab">
         <div class="caption">
-          <h2 class="col-10 mx-auto">Inn2 - Test Match</h2>
-          <h4 class="col-10 mx-auto">Batting</h4>
+          <h4 class="col-10 mx-auto">Test Match - 2<sup>nd</sup> Innings</h4>
+          <h5 class="col-10 mx-auto">Batting</h5>
         </div>
         <h5>
-          <div id="inn1div" class="col-10 mx-auto school">School Name</div>
+          <div id="inn3div" class="col-10 mx-auto school">School Name</div>
         </h5>
         <span class="arrowtable">
           <i class="material-icons">
@@ -206,21 +254,220 @@
             <thead>
               <tr>
                 <th class="col-5">Name</th>
-                <th class="col">Points</th>
+                <th class="col">Runs</th>
                 <th class="col">Balls</th>
                 <th class="col">SR</th>
               </tr>
             </thead>
-            <tbody id="inn1">
-              <!-- <tr>
-                <td class="col">Supun Tharinda</td>
-                <td class="col">125</td>
-                <td class="col">56</td>
-                <td class="col">56.35</td>
-              </tr> -->
+            <tbody id="inn3">
             </tbody>
           </table>
         </div>
+        <!--  -->
+        <div class="caption">
+          <h5 class="col-10 mx-auto">Bowling</h5>
+        </div>
+        <h5>
+          <div id="inn3divB" class="col-10 mx-auto school">School Name</div>
+        </h5>
+        <span class="arrowtable">
+          <i class="material-icons">
+            arrow_right_alt
+          </i>
+        </span>
+        <div class="scoretable">
+          <table class="table col-10 mx-auto align-self-center table-bordered">
+            <thead>
+              <tr>
+                <th class="col-5">Name</th>
+                <th class="col">Overs</th>
+                <th class="col">Maiden</th>
+                <th class="col">Runs</th>
+                <th class="col">Wickets</th>
+                <th class="col">Econ.</th>
+              </tr>
+            </thead>
+            <tbody id="inn3B">
+            </tbody>
+
+          </table>
+        </div>
+        <!--  -->
+      </div>
+      <div class="tab-pane fade" id="pills-inn4" role="tabpanel" aria-labelledby="pills-inn4-tab">
+        <div class="caption">
+          <h4 class="col-10 mx-auto">Test Match - 2<sup>nd</sup> Innings</h4>
+          <h5 class="col-10 mx-auto">Batting</h5>
+        </div>
+        <h5>
+          <div id="inn4div" class="col-10 mx-auto school">School Name</div>
+        </h5>
+        <span class="arrowtable">
+          <i class="material-icons">
+            arrow_right_alt
+          </i>
+        </span>
+        <div class="scoretable">
+          <table class="table col-10 mx-auto align-self-center table-bordered">
+            <thead>
+              <tr>
+                <th class="col-5">Name</th>
+                <th class="col">Runs</th>
+                <th class="col">Balls</th>
+                <th class="col">SR</th>
+              </tr>
+            </thead>
+            <tbody id="inn4">
+            </tbody>
+          </table>
+        </div>
+         <!--  -->
+         <div class="caption">
+          <h5 class="col-10 mx-auto">Bowling</h5>
+        </div>
+        <h5>
+          <div id="inn4divB" class="col-10 mx-auto school">School Name</div>
+        </h5>
+        <span class="arrowtable">
+          <i class="material-icons">
+            arrow_right_alt
+          </i>
+        </span>
+        <div class="scoretable">
+          <table class="table col-10 mx-auto align-self-center table-bordered">
+            <thead>
+              <tr>
+                <th class="col-5">Name</th>
+                <th class="col">Overs</th>
+                <th class="col">Maiden</th>
+                <th class="col">Runs</th>
+                <th class="col">Wickets</th>
+                <th class="col">Econ.</th>
+              </tr>
+            </thead>
+            <tbody id="inn4B">
+            </tbody>
+
+          </table>
+        </div>
+        <!--  -->
+      </div>
+      <div class="tab-pane fade" id="pills-inn5" role="tabpanel" aria-labelledby="pills-inn5-tab">
+        <div class="caption">
+          <h4 class="col-10 mx-auto">One Day Match</h4>
+          <h5 class="col-10 mx-auto">Batting</h5>
+        </div>
+        <h5>
+          <div id="inn5div" class="col-10 mx-auto school">School Name</div>
+        </h5>
+        <span class="arrowtable">
+          <i class="material-icons">
+            arrow_right_alt
+          </i>
+        </span>
+        <div class="scoretable">
+          <table class="table col-10 mx-auto align-self-center table-bordered">
+            <thead>
+              <tr>
+                <th class="col-5">Name</th>
+                <th class="col">Runs</th>
+                <th class="col">Balls</th>
+                <th class="col">SR</th>
+              </tr>
+            </thead>
+            <tbody id="inn5">
+            </tbody>
+          </table>
+        </div>
+         <!--  -->
+         <div class="caption">
+          <h5 class="col-10 mx-auto">Bowling</h5>
+        </div>
+        <h5>
+          <div id="inn5divB" class="col-10 mx-auto school">School Name</div>
+        </h5>
+        <span class="arrowtable">
+          <i class="material-icons">
+            arrow_right_alt
+          </i>
+        </span>
+        <div class="scoretable">
+          <table class="table col-10 mx-auto align-self-center table-bordered">
+            <thead>
+              <tr>
+                <th class="col-5">Name</th>
+                <th class="col">Overs</th>
+                <th class="col">Maiden</th>
+                <th class="col">Runs</th>
+                <th class="col">Wickets</th>
+                <th class="col">Econ.</th>
+              </tr>
+            </thead>
+            <tbody id="inn5B">
+            </tbody>
+
+          </table>
+        </div>
+        <!--  -->
+      </div>
+      <div class="tab-pane fade" id="pills-inn6" role="tabpanel" aria-labelledby="pills-inn6-tab">
+        <div class="caption">
+          <h4 class="col-10 mx-auto">One Day Match</h4>
+          <h5 class="col-10 mx-auto">Batting</h5>
+        </div>
+        <h5>
+          <div id="inn6div" class="col-10 mx-auto school">School Name</div>
+        </h5>
+        <span class="arrowtable">
+          <i class="material-icons">
+            arrow_right_alt
+          </i>
+        </span>
+        <div class="scoretable">
+          <table class="table col-10 mx-auto align-self-center table-bordered">
+            <thead>
+              <tr>
+                <th class="col-5">Name</th>
+                <th class="col">Runs</th>
+                <th class="col">Balls</th>
+                <th class="col">SR</th>
+              </tr>
+            </thead>
+            <tbody id="inn6">
+            </tbody>
+
+          </table>
+        </div>
+         <!--  -->
+         <div class="caption">
+          <h5 class="col-10 mx-auto">Bowling</h5>
+        </div>
+        <h5>
+          <div id="inn6divB" class="col-10 mx-auto school">School Name</div>
+        </h5>
+        <span class="arrowtable">
+          <i class="material-icons">
+            arrow_right_alt
+          </i>
+        </span>
+        <div class="scoretable">
+          <table class="table col-10 mx-auto align-self-center table-bordered">
+            <thead>
+              <tr>
+                <th class="col-5">Name</th>
+                <th class="col">Overs</th>
+                <th class="col">Maiden</th>
+                <th class="col">Runs</th>
+                <th class="col">Wickets</th>
+                <th class="col">Econ.</th>
+              </tr>
+            </thead>
+            <tbody id="inn6B">
+            </tbody>
+
+          </table>
+        </div>
+        <!--  -->
       </div>
     </div>
   </div>
