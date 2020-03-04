@@ -42,12 +42,53 @@ var inn6div = document.getElementById('inn6div');
 var innschool = db.collection("other").doc("teamsinn");
 
 innschool.onSnapshot(function(doc) {
-  inn1div.innerHTML = doc.data().inn1;
-  inn2div.innerHTML = doc.data().inn2;
-  inn3div.innerHTML = doc.data().inn3;
-  inn4div.innerHTML = doc.data().inn4;
-  inn5div.innerHTML = doc.data().inn5;
-  inn6div.innerHTML = doc.data().inn6;
+  if(doc.data().inn1 == 'ananda'){
+    inn1div.innerHTML = 'Ananda College';
+  }else if(doc.data().inn1 == 'nalanda'){
+    inn1div.innerHTML = 'Nalanda College';
+  }else{
+    inn1div.innerHTML = 'Played School';
+  }
+
+  // if(doc.data().inn2 == 'ananda'){
+  //   inn2div.innerHTML = 'Ananda College';
+  // }else if(doc.data().inn2 == 'nalanda'){
+  //   inn2div.innerHTML = 'Nalanda College';
+  // }else{
+  //   inn2div.innerHTML = 'Played School';
+  // }
+
+  // if(doc.data().inn3 == 'ananda'){
+  //   inn3div.innerHTML = 'Ananda College';
+  // }else if(doc.data().inn3 == 'nalanda'){
+  //   inn3div.innerHTML = 'Nalanda College';
+  // }else{
+  //   inn3div.innerHTML = 'Played School';
+  // }
+
+  // if(doc.data().inn4 == 'ananda'){
+  //   inn4div.innerHTML = 'Ananda College';
+  // }else if(doc.data().inn4 == 'nalanda'){
+  //   inn4div.innerHTML = 'Nalanda College';
+  // }else{
+  //   inn4div.innerHTML = 'Played School';
+  // }
+  
+  // if(doc.data().inn5 == 'ananda'){
+  //   inn5div.innerHTML = 'Ananda College';
+  // }else if(doc.data().inn5 == 'nalanda'){
+  //   inn5div.innerHTML = 'Nalanda College';
+  // }else{
+  //   inn5div.innerHTML = 'Played School';
+  // }
+
+  // if(doc.data().inn6 == 'ananda'){
+  //   inn6div.innerHTML = 'Ananda College';
+  // }else if(doc.data().inn6 == 'nalanda'){
+  //   inn6div.innerHTML = 'Nalanda College';
+  // }else{
+  //   inn6div.innerHTML = 'Played School';
+  // }
 });
 
 // innning
@@ -63,9 +104,13 @@ function renderinn1(doc){
 
   trinn1.setAttribute('data-id', doc.id);
   nameinn1.textContent = doc.name;
-  pointsinn1.textContent = 50;
-  ballsinn1.textContent = 10;
-  srinn1.textContent = 10;
+  pointsinn1.textContent = doc.points;
+  ballsinn1.textContent = doc.balls;
+  if(doc.balls != 0){
+    srinn1.textContent = ((doc.points/doc.balls)*100).toFixed(2);
+  }else{
+    srinn1.textContent = '--';
+  }
 
   trinn1.appendChild(nameinn1);
   trinn1.appendChild(pointsinn1);

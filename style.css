@@ -157,11 +157,18 @@ body{
 
 /* about */
 .credits{
-  margin-top: -25%;
+  margin-top: -10%;
   padding-bottom: 10%;
   background-color: rgb(174, 0, 0);
   color: white;
   margin-bottom: 20%;
+}
+
+
+.bgacicts{
+  width: 100%;
+  margin-top: -10%;
+  z-index: -1;
 }
 
 .post{
@@ -180,10 +187,19 @@ body{
 }
 
 /* Scoreboard */
+.inningsselect{
+  margin-top: 10px
+}
+
+.inningselect .navitem{
+  padding: 0px;
+}
 
 .scoreboard{
   margin-top: -45%;
+  margin-bottom: 20%;
 }
+
 .scoreboard .caption{
   text-align: center;
   margin-top: 20px;
@@ -191,4 +207,19 @@ body{
 
 .school{
   text-align: center;
+}
+
+.arrowtable{
+  float: right;
+}
+
+.scoretable{
+  overflow-x: auto;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.table{
+  white-space: nowrap;
+  width: 100%;
 }
