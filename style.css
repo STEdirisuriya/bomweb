@@ -187,6 +187,24 @@ body{
 }
 
 /* Scoreboard */
+.imageholder2{
+  display: inline-block;
+}
+
+.onedaytxt{
+  
+}
+
+.bg2{
+  width: 100%;
+  margin-top: -10%;
+  z-index: -1;
+}
+
+.scoreboard1{
+  margin-top: -50%;
+  margin-bottom: 20%;
+}
 .inningsselect{
   margin-top: 10px
 }
@@ -195,8 +213,19 @@ body{
   padding: 0px;
 }
 
+.inningtexttop{
+  margin-top: 5%;
+}
+
+.inntxt{
+  text-align: center;
+}
+
+.tab-content{
+}
+
 .scoreboard{
-  margin-top: -45%;
+  margin-top: -15%;
   margin-bottom: 20%;
 }
 

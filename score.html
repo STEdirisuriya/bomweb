@@ -1,32 +1,34 @@
-
 <!doctype html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Other Css -->
-    <script src="https://www.gstatic.com/firebasejs/5.0.3/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/5.0.3/firebase-firestore.js"></script>
-    <link href="style.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
-    <title>
-      BOM LIVE SCORE 20
-    </title>
+  <!-- Other Css -->
+  <script src="https://www.gstatic.com/firebasejs/5.0.3/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.0.3/firebase-firestore.js"></script>
+  <link href="style.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
-  </head>
+  <title>
+    BOM LIVE SCORE 20
+  </title>
 
-  <body>
+</head>
+
+<body>
 
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" href="#">BOM LIVE SCORE 20</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+      aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
@@ -47,8 +49,8 @@
     </div>
   </nav>
 
-  <div class="imageholder">
-    <img src="./assets/bgac.png" class="bg" id="bg" alt=""/>
+  <div class="imageholder2">
+    <img src="./assets/bgac.png" class="bg2" id="bg" alt="" />
   </div>
 
 
@@ -59,10 +61,10 @@
           <h3 class="schoolname" id="school">School Name</h3>
           <p class="battext">Batting now</p>
           <span class="onbutton">
-          <i class="material-icons">hdr_weak</i>
+            <i class="material-icons">hdr_weak</i>
           </span>
           <span class="offbutton">
-          <i class="material-icons off">hdr_strong</i>
+            <i class="material-icons off">hdr_strong</i>
           </span>
           <p class="inning" id="inning">
             1<sup>st</sup> Innings
@@ -72,132 +74,155 @@
     </div>
   </div>
 
-  <div class="card mx-auto shadow scoreboard">
 
+  <div class="card mx-auto col-10 shadow scoreboard1">
+    <div class="card-body col-12 mx-auto inningtexttop">
+      <div class="container">
+        <div class="row">
+          <div class="col align-self-center inntxt">
+            1<sup>st</sup> Innings
+          </div>
+          <div class="col align-self-center inntxt">
+            2<sup>nd</sup> Innings
+          </div>
+        </div>
+      </div>
+    </div>
     
-      <ul class="nav nav-pills nav-fill mb-3 col-10 mx-auto inningsselect" id="pills-tab" role="tablist">
-        <li class="nav-item">
-          <a class="nav-link btn-light active " id="pills-inn1-tab" data-toggle="pill" href="#pills-inn1" role="tab" aria-controls="pills-inn1" aria-selected="true">1-I</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link btn-light" id="pills-inn2-tab" data-toggle="pill" href="#pills-inn2" role="tab" aria-controls="pills-inn2" aria-selected="false">1-II</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link btn-light" id="pills-inn3-tab" data-toggle="pill" href="#pills-inn3" role="tab" aria-controls="pills-inn3" aria-selected="false">2-I</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link btn-light" id="pills-inn4-tab" data-toggle="pill" href="#pills-inn4" role="tab" aria-controls="pills-inn4" aria-selected="true">2-II</a>
-        </li>
-        <br>
-        <li class="nav-item">
-          <a class="nav-link btn-light" id="pills-inn5-tab" data-toggle="pill" href="#pills-inn5" role="tab" aria-controls="pills-inn5" aria-selected="false">Oneday Match I</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link btn-light" id="pills-inn5-tab" data-toggle="pill" href="#pills-inn6" role="tab" aria-controls="pills-inn6" aria-selected="false">Oneday Match II</a>
-        </li>
-      </ul>
- 
-
-  
-  <div class="tab-content" id="pills-tabContent">
-    <div class="tab-pane fade show active" id="pills-inn1" role="tabpanel" aria-labelledby="pills-inn1-tab">
-      <div class="caption">
-        <h2 class="col-10 mx-auto">Inn1 - Test Match</h2>
-        <h4 class="col-10 mx-auto">Batting</h4>
-        </div>
-        <h5><div id="inn1div" class="col-10 mx-auto school">School Name</div></h5>
-        <span class="arrowtable">
-          <i class="material-icons">
-            arrow_right_alt
-          </i>
-          </span>
-      <div class="scoretable">
-        
-        <table class="table col-10 mx-auto align-self-center table-bordered">
-            <thead>
-              <tr >
-                <th class="col-5">Name</th>
-                <th class="col">Points</th>
-                <th class="col">Balls</th>
-                <th class="col">SR</th>
-              </tr>
-            </thead>
-            <tbody id="inn1">
-              <!-- <tr>
-                <td class="col">Supun Tharinda</td>
-                <td class="col">125</td>
-                <td class="col">56</td>
-                <td class="col">56.35</td>
-              </tr> -->
-            </tbody>
-          </table>
-          </div>
-    </div>
-    <div class="tab-pane fade" id="pills-inn2" role="tabpanel" aria-labelledby="pills-inn2-tab">
-      <div class="caption">
-        <h2 class="col-10 mx-auto">Inn1 - Test Match</h2>
-        <h4 class="col-10 mx-auto">Batting</h4>
-        </div>
-        <h5><div id="inn1div" class="col-10 mx-auto school">School Name</div></h5>
-        <span class="arrowtable">
-          <i class="material-icons">
-            arrow_right_alt
-          </i>
-          </span>
-      <div class="scoretable">
-        <table class="table col-10 mx-auto align-self-center table-bordered">
-            <thead>
-              <tr >
-                <th class="col-5">Name</th>
-                <th class="col">Points</th>
-                <th class="col">Balls</th>
-                <th class="col">SR</th>
-              </tr>
-            </thead>
-            <tbody id="inn1">
-              <!-- <tr>
-                <td class="col">Supun Tharinda</td>
-                <td class="col">125</td>
-                <td class="col">56</td>
-                <td class="col">56.35</td>
-              </tr> -->
-            </tbody>
-          </table>
-          </div>
-    </div>
-    <div class="tab-pane fade" id="pills-inn3" role="tabpanel" aria-labelledby="pills-inn3-tab">
-      <div class="caption">
-        <h2 class="col-10 mx-auto">Inn2 - Test Match</h2>
-        <h4 class="col-10 mx-auto">Batting</h4>
-        </div>
-        <h5><div id="inn1div" class="col-10 mx-auto school">School Name</div></h5>
-        <span class="arrowtable">
-          <i class="material-icons">
-            arrow_right_alt
-          </i>
-          </span>
-      <div class="scoretable">
-        <table class="table col-10 mx-auto align-self-center table-bordered">
-            <thead>
-              <tr >
-                <th class="col-5">Name</th>
-                <th class="col">Points</th>
-                <th class="col">Balls</th>
-                <th class="col">SR</th>
-              </tr>
-            </thead>
-            <tbody id="inn1">
-              <!-- <tr>
-                <td class="col">Supun Tharinda</td>
-                <td class="col">125</td>
-                <td class="col">56</td>
-                <td class="col">56.35</td>
-              </tr> -->
-            </tbody>
-          </table>
-          </div>
-    </div>
+    <ul class="nav nav-pills nav-fill mb-3 mx-auto inningsselect" id="pills-tab" role="tablist">
+      
+      <li class="nav-item">
+        <a class="nav-link btn-light active " id="pills-inn1-tab" style="margin-left: 5px;" data-toggle="pill" href="#pills-inn1" role="tab"
+          aria-controls="pills-inn1" aria-selected="true">A</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link btn-light" id="pills-inn2-tab" style="margin-right: 5px;" data-toggle="pill" href="#pills-inn2" role="tab"
+          aria-controls="pills-inn2" aria-selected="false">B</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link btn-light" id="pills-inn3-tab" style="margin-left: 5px;" data-toggle="pill" href="#pills-inn3" role="tab"
+          aria-controls="pills-inn3" aria-selected="false">A</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link btn-light" id="pills-inn4-tab" style="margin-right: 5px;" data-toggle="pill" href="#pills-inn4" role="tab"
+          aria-controls="pills-inn4" aria-selected="true">B</a>
+      </li>
+      <li class="col nav-item align-self-center" style="margin-top: 10px;">
+        <a class="nav-link btn-light" id="pills-inn5-tab" data-toggle="pill" href="#pills-inn5" role="tab"
+          aria-controls="pills-inn5" aria-selected="false">Oneday Match I</a>
+      </li>
+      <li class="col nav-item align-self-center">
+        <a class="nav-link btn-light" id="pills-inn5-tab" data-toggle="pill" href="#pills-inn6" role="tab"
+          aria-controls="pills-inn6" aria-selected="false">Oneday Match II</a>
+      </li>
+    </ul>
   </div>
+    <div class="card col mx-auto border-white scoreboard">
+    <div class="tab-content" id="pills-tabContent">
+      <div class="tab-pane fade show active" id="pills-inn1" role="tabpanel" aria-labelledby="pills-inn1-tab">
+        <div class="caption">
+          <h3 class="col-10 mx-auto">Inn1 - Test Match</h3>
+          <h4 class="col-10 mx-auto">Batting</h4>
+        </div>
+        <h5>
+          <div id="inn1div" class="col-10 mx-auto school">School Name</div>
+        </h5>
+        <span class="arrowtable">
+          <i class="material-icons">
+            arrow_right_alt
+          </i>
+        </span>
+        <div class="scoretable">
+
+          <table class="table col-10 mx-auto align-self-center table-bordered">
+            <thead>
+              <tr>
+                <th class="col-5">Name</th>
+                <th class="col">Points</th>
+                <th class="col">Balls</th>
+                <th class="col">SR</th>
+              </tr>
+            </thead>
+            <tbody id="inn1">
+              <!-- <tr>
+                <td class="col">Supun Tharinda</td>
+                <td class="col">125</td>
+                <td class="col">56</td>
+                <td class="col">56.35</td>
+              </tr> -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="tab-pane fade" id="pills-inn2" role="tabpanel" aria-labelledby="pills-inn2-tab">
+        <div class="caption">
+          <h2 class="col-10 mx-auto">Inn1 - Test Match</h2>
+          <h4 class="col-10 mx-auto">Batting</h4>
+        </div>
+        <h5>
+          <div id="inn1div" class="col-10 mx-auto school">School Name</div>
+        </h5>
+        <span class="arrowtable">
+          <i class="material-icons">
+            arrow_right_alt
+          </i>
+        </span>
+        <div class="scoretable">
+          <table class="table col-10 mx-auto align-self-center table-bordered">
+            <thead>
+              <tr>
+                <th class="col-5">Name</th>
+                <th class="col">Points</th>
+                <th class="col">Balls</th>
+                <th class="col">SR</th>
+              </tr>
+            </thead>
+            <tbody id="inn1">
+              <!-- <tr>
+                <td class="col">Supun Tharinda</td>
+                <td class="col">125</td>
+                <td class="col">56</td>
+                <td class="col">56.35</td>
+              </tr> -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="tab-pane fade" id="pills-inn3" role="tabpanel" aria-labelledby="pills-inn3-tab">
+        <div class="caption">
+          <h2 class="col-10 mx-auto">Inn2 - Test Match</h2>
+          <h4 class="col-10 mx-auto">Batting</h4>
+        </div>
+        <h5>
+          <div id="inn1div" class="col-10 mx-auto school">School Name</div>
+        </h5>
+        <span class="arrowtable">
+          <i class="material-icons">
+            arrow_right_alt
+          </i>
+        </span>
+        <div class="scoretable">
+          <table class="table col-10 mx-auto align-self-center table-bordered">
+            <thead>
+              <tr>
+                <th class="col-5">Name</th>
+                <th class="col">Points</th>
+                <th class="col">Balls</th>
+                <th class="col">SR</th>
+              </tr>
+            </thead>
+            <tbody id="inn1">
+              <!-- <tr>
+                <td class="col">Supun Tharinda</td>
+                <td class="col">125</td>
+                <td class="col">56</td>
+                <td class="col">56.35</td>
+              </tr> -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
   </div>
 
   <div class="footer fixed-bottom">
@@ -214,11 +239,17 @@
       </div>
     </div>
   </div>
-  
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-    <script src="score.js"></script>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+  </script>
+  <script src="score.js"></script>
 </body>
 
 </html>
