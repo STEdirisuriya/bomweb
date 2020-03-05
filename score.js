@@ -522,11 +522,11 @@ boardbatinn1B.onSnapshot(snapshot => {
     if (change.type == 'added') {
       renderinn1B(change.doc.data());
     } else if (change.type == 'removed') {
-      let trinn1B = inn1.querySelector('[data-id=' + change.doc.data().id + ']');
-      inn1B.removeChild(trinn1);
+      let trinn1B = inn1B.querySelector('[data-id=' + change.doc.data().id + ']');
+      inn1B.removeChild(trinn1B);
     } else if (change.type == 'modified') {
-      let trinn1B = inn1.querySelector('[data-id=' + change.doc.data().id + ']');
-      inn1B.removeChild(trinn1);
+      let trinn1B = inn1B.querySelector('[data-id=' + change.doc.data().id + ']');
+      inn1B.removeChild(trinn1B);
       renderinn1B(change.doc.data());
     }
   });
@@ -579,11 +579,11 @@ boardbatinn2B.onSnapshot(snapshot => {
     if (change.type == 'added') {
       renderinn2B(change.doc.data());
     } else if (change.type == 'removed') {
-      let trinn2B = inn2.querySelector('[data-id=' + change.doc.data().id + ']');
-      inn2B.removeChild(trinn2);
+      let trinn2B = inn2B.querySelector('[data-id=' + change.doc.data().id + ']');
+      inn2B.removeChild(trinn2B);
     } else if (change.type == 'modified') {
-      let trinn2B = inn2.querySelector('[data-id=' + change.doc.data().id + ']');
-      inn2B.removeChild(trinn2);
+      let trinn2B = inn2B.querySelector('[data-id=' + change.doc.data().id + ']');
+      inn2B.removeChild(trinn2B);
       renderinn2B(change.doc.data());
     }
   });
@@ -635,11 +635,11 @@ boardbatinn3B.onSnapshot(snapshot => {
     if (change.type == 'added') {
       renderinn3B(change.doc.data());
     } else if (change.type == 'removed') {
-      let trinn3B = inn3.querySelector('[data-id=' + change.doc.data().id + ']');
-      inn3B.removeChild(trinn3);
+      let trinn3B = inn3B.querySelector('[data-id=' + change.doc.data().id + ']');
+      inn3B.removeChild(trinn3B);
     } else if (change.type == 'modified') {
-      let trinn3B = inn3.querySelector('[data-id=' + change.doc.data().id + ']');
-      inn3B.removeChild(trinn3);
+      let trinn3B = inn3B.querySelector('[data-id=' + change.doc.data().id + ']');
+      inn3B.removeChild(trinn3B);
       renderinn3B(change.doc.data());
     }
   });
@@ -690,11 +690,11 @@ boardbatinn4B.onSnapshot(snapshot => {
     if (change.type == 'added') {
       renderinn4B(change.doc.data());
     } else if (change.type == 'removed') {
-      let trinn4B = inn4.querySelector('[data-id=' + change.doc.data().id + ']');
-      inn4B.removeChild(trinn4);
+      let trinn4B = inn4B.querySelector('[data-id=' + change.doc.data().id + ']');
+      inn4B.removeChild(trinn4B);
     } else if (change.type == 'modified') {
-      let trinn4B = inn4.querySelector('[data-id=' + change.doc.data().id + ']');
-      inn4B.removeChild(trinn4);
+      let trinn4B = inn4B.querySelector('[data-id=' + change.doc.data().id + ']');
+      inn4B.removeChild(trinn4B);
       renderinn4B(change.doc.data());
     }
   });
@@ -745,11 +745,11 @@ boardbatinn5B.onSnapshot(snapshot => {
     if (change.type == 'added') {
       renderinn5B(change.doc.data());
     } else if (change.type == 'removed') {
-      let trinn5B = inn5.querySelector('[data-id=' + change.doc.data().id + ']');
-      inn5B.removeChild(trinn5);
+      let trinn5B = inn5B.querySelector('[data-id=' + change.doc.data().id + ']');
+      inn5B.removeChild(trinn5B);
     } else if (change.type == 'modified') {
-      let trinn5B = inn5.querySelector('[data-id=' + change.doc.data().id + ']');
-      inn5B.removeChild(trinn5);
+      let trinn5B = inn5B.querySelector('[data-id=' + change.doc.data().id + ']');
+      inn5B.removeChild(trinn5B);
       renderinn5B(change.doc.data());
     }
   });
@@ -799,11 +799,11 @@ boardbatinn6B.onSnapshot(snapshot => {
     if (change.type == 'added') {
       renderinn6B(change.doc.data());
     } else if (change.type == 'removed') {
-      let trinn6B = inn6.querySelector('[data-id=' + change.doc.data().id + ']');
-      inn6B.removeChild(trinn6);
+      let trinn6B = inn6B.querySelector('[data-id=' + change.doc.data().id + ']');
+      inn6B.removeChild(trinn6B);
     } else if (change.type == 'modified') {
-      let trinn6B = inn6.querySelector('[data-id=' + change.doc.data().id + ']');
-      inn6B.removeChild(trinn6);
+      let trinn6B = inn6B.querySelector('[data-id=' + change.doc.data().id + ']');
+      inn6B.removeChild(trinn6B);
       renderinn6B(change.doc.data());
     }
   });
