@@ -108,11 +108,13 @@ function renderPlayer(doc) {
 
 nowinn.onSnapshot(function (doc) {
   batting.innerHTML = "";
+  bowling.innerHTML = "";
 });
 
 nowinn.onSnapshot(function (doc) {
   currentinn = doc.data().inn;
   batting.innerHTML = "";
+  bowling.innerHTML = "";
   battingnow = db.collection("batting/inn" + currentinn + "/players").where("in", "==", true).limit(2);
   
   battingnow.onSnapshot(snapshot => {
