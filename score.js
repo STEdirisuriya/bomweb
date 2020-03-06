@@ -202,11 +202,11 @@ function renderinn1(doc) {
   let srinn1 = document.createElement('td');
 
   trinn1.setAttribute('data-id', doc.id);
-  nameinn1.textContent = doc.name;
-  pointsinn1.textContent = doc.points;
-  ballsinn1.textContent = doc.balls;
-  if (doc.balls != 0) {
-    srinn1.textContent = ((doc.points / doc.balls) * 100).toFixed(2);
+  nameinn1.textContent = doc.data().name;
+  pointsinn1.textContent = doc.data().points;
+  ballsinn1.textContent = doc.data().balls;
+  if (doc.data().balls != 0) {
+    srinn1.textContent = ((doc.data().points / doc.data().balls) * 100).toFixed(2);
   } else {
     srinn1.textContent = '--';
   }
@@ -226,14 +226,14 @@ boardbatinn1.onSnapshot(snapshot => {
   let changes = snapshot.docChanges();
   changes.forEach(change => {
     if (change.type == 'added') {
-      renderinn1(change.doc.data());
+      renderinn1(change.doc);
     } else if (change.type == 'removed') {
-      let trinn1 = inn1.querySelector('[data-id=' + change.doc.data().id + ']');
+      let trinn1 = inn1.querySelector('[data-id=' + change.doc.id + ']');
       inn1.removeChild(trinn1);
     } else if (change.type == 'modified') {
-      let trinn1 = inn1.querySelector('[data-id=' + change.doc.data().id + ']');
+      let trinn1 = inn1.querySelector('[data-id=' + change.doc.id + ']');
       inn1.removeChild(trinn1);
-      renderinn1(change.doc.data());
+      renderinn1(change.doc);
     }
   });
 });
@@ -250,11 +250,11 @@ function renderinn2(doc) {
   let srinn2 = document.createElement('td');
 
   trinn2.setAttribute('data-id', doc.id);
-  nameinn2.textContent = doc.name;
-  pointsinn2.textContent = doc.points;
-  ballsinn2.textContent = doc.balls;
-  if (doc.balls != 0) {
-    srinn2.textContent = ((doc.points / doc.balls) * 100).toFixed(2);
+  nameinn2.textContent = doc.data().name;
+  pointsinn2.textContent = doc.data().points;
+  ballsinn2.textContent = doc.data().balls;
+  if (doc.data().balls != 0) {
+    srinn2.textContent = ((doc.data().points / doc.data().balls) * 100).toFixed(2);
   } else {
     srinn2.textContent = '--';
   }
@@ -274,14 +274,14 @@ boardbatinn2.onSnapshot(snapshot => {
   let changes = snapshot.docChanges();
   changes.forEach(change => {
     if (change.type == 'added') {
-      renderinn2(change.doc.data());
+      renderinn2(change.doc);
     } else if (change.type == 'removed') {
-      let trinn2 = inn2.querySelector('[data-id=' + change.doc.data().id + ']');
+      let trinn2 = inn2.querySelector('[data-id=' + change.doc.id + ']');
       inn2.removeChild(trinn2);
     } else if (change.type == 'modified') {
-      let trinn2 = inn2.querySelector('[data-id=' + change.doc.data().id + ']');
+      let trinn2 = inn2.querySelector('[data-id=' + change.doc.id + ']');
       inn2.removeChild(trinn2);
-      renderinn2(change.doc.data());
+      renderinn2(change.doc);
     }
   });
 });
@@ -298,11 +298,11 @@ function renderinn3(doc) {
   let srinn3 = document.createElement('td');
 
   trinn3.setAttribute('data-id', doc.id);
-  nameinn3.textContent = doc.name;
-  pointsinn3.textContent = doc.points;
-  ballsinn3.textContent = doc.balls;
-  if (doc.balls != 0) {
-    srinn3.textContent = ((doc.points / doc.balls) * 100).toFixed(2);
+  nameinn3.textContent = doc.data().name;
+  pointsinn3.textContent = doc.data().points;
+  ballsinn3.textContent = doc.data().balls;
+  if (doc.data().balls != 0) {
+    srinn3.textContent = ((doc.data().points / doc.data().balls) * 100).toFixed(2);
   } else {
     srinn3.textContent = '--';
   }
@@ -322,14 +322,14 @@ boardbatinn3.onSnapshot(snapshot => {
   let changes = snapshot.docChanges();
   changes.forEach(change => {
     if (change.type == 'added') {
-      renderinn3(change.doc.data());
+      renderinn3(change.doc);
     } else if (change.type == 'removed') {
-      let trinn3 = inn3.querySelector('[data-id=' + change.doc.data().id + ']');
+      let trinn3 = inn3.querySelector('[data-id=' + change.doc.id + ']');
       inn3.removeChild(trinn3);
     } else if (change.type == 'modified') {
-      let trinn3 = inn3.querySelector('[data-id=' + change.doc.data().id + ']');
+      let trinn3 = inn3.querySelector('[data-id=' + change.doc.id + ']');
       inn3.removeChild(trinn3);
-      renderinn3(change.doc.data());
+      renderinn3(change.doc);
     }
   });
 });
@@ -346,11 +346,11 @@ function renderinn4(doc) {
   let srinn4 = document.createElement('td');
 
   trinn4.setAttribute('data-id', doc.id);
-  nameinn4.textContent = doc.name;
-  pointsinn4.textContent = doc.points;
-  ballsinn4.textContent = doc.balls;
-  if (doc.balls != 0) {
-    srinn4.textContent = ((doc.points / doc.balls) * 100).toFixed(2);
+  nameinn4.textContent = doc.data().name;
+  pointsinn4.textContent = doc.data().points;
+  ballsinn4.textContent = doc.data().balls;
+  if (doc.data().balls != 0) {
+    srinn4.textContent = ((doc.points / doc.data().balls) * 100).toFixed(2);
   } else {
     srinn4.textContent = '--';
   }
@@ -370,14 +370,14 @@ boardbatinn4.onSnapshot(snapshot => {
   let changes = snapshot.docChanges();
   changes.forEach(change => {
     if (change.type == 'added') {
-      renderinn4(change.doc.data());
+      renderinn4(change.doc);
     } else if (change.type == 'removed') {
-      let trinn4 = inn4.querySelector('[data-id=' + change.doc.data().id + ']');
+      let trinn4 = inn4.querySelector('[data-id=' + change.doc.id + ']');
       inn4.removeChild(trinn4);
     } else if (change.type == 'modified') {
-      let trinn4 = inn4.querySelector('[data-id=' + change.doc.data().id + ']');
+      let trinn4 = inn4.querySelector('[data-id=' + change.doc.id + ']');
       inn4.removeChild(trinn4);
-      renderinn4(change.doc.data());
+      renderinn4(change.doc);
     }
   });
 });
@@ -394,11 +394,11 @@ function renderinn5(doc) {
   let srinn5 = document.createElement('td');
 
   trinn5.setAttribute('data-id', doc.id);
-  nameinn5.textContent = doc.name;
-  pointsinn5.textContent = doc.points;
-  ballsinn5.textContent = doc.balls;
-  if (doc.balls != 0) {
-    srinn5.textContent = ((doc.points / doc.balls) * 100).toFixed(2);
+  nameinn5.textContent = doc.data().name;
+  pointsinn5.textContent = doc.data().points;
+  ballsinn5.textContent = doc.data().balls;
+  if (doc.data().balls != 0) {
+    srinn5.textContent = ((doc.data().points / doc.data().balls) * 100).toFixed(2);
   } else {
     srinn5.textContent = '--';
   }
@@ -417,14 +417,14 @@ boardbatinn5.onSnapshot(snapshot => {
   let changes = snapshot.docChanges();
   changes.forEach(change => {
     if (change.type == 'added') {
-      renderinn5(change.doc.data());
+      renderinn5(change.doc);
     } else if (change.type == 'removed') {
-      let trinn5 = inn5.querySelector('[data-id=' + change.doc.data().id + ']');
+      let trinn5 = inn5.querySelector('[data-id=' + change.doc.id + ']');
       inn5.removeChild(trinn5);
     } else if (change.type == 'modified') {
-      let trinn5 = inn5.querySelector('[data-id=' + change.doc.data().id + ']');
+      let trinn5 = inn5.querySelector('[data-id=' + change.doc.id + ']');
       inn5.removeChild(trinn5);
-      renderinn5(change.doc.data());
+      renderinn5(change.doc);
     }
   });
 });
@@ -441,11 +441,11 @@ function renderinn6(doc) {
   let srinn6 = document.createElement('td');
 
   trinn6.setAttribute('data-id', doc.id);
-  nameinn6.textContent = doc.name;
-  pointsinn6.textContent = doc.points;
-  ballsinn6.textContent = doc.balls;
+  nameinn6.textContent = doc.data().name;
+  pointsinn6.textContent = doc.data().points;
+  ballsinn6.textContent = doc.data().balls;
   if (doc.balls != 0) {
-    srinn6.textContent = ((doc.points / doc.balls) * 100).toFixed(2);
+    srinn6.textContent = ((doc.data().points / doc.data().balls) * 100).toFixed(2);
   } else {
     srinn6.textContent = '--';
   }
@@ -465,14 +465,14 @@ boardbatinn6.onSnapshot(snapshot => {
   let changes = snapshot.docChanges();
   changes.forEach(change => {
     if (change.type == 'added') {
-      renderinn6(change.doc.data());
+      renderinn6(change.doc);
     } else if (change.type == 'removed') {
-      let trinn6 = inn6.querySelector('[data-id=' + change.doc.data().id + ']');
+      let trinn6 = inn6.querySelector('[data-id=' + change.doc.id + ']');
       inn6.removeChild(trinn6);
     } else if (change.type == 'modified') {
-      let trinn6 = inn6.querySelector('[data-id=' + change.doc.data().id + ']');
+      let trinn6 = inn6.querySelector('[data-id=' + change.doc.id + ']');
       inn6.removeChild(trinn6);
-      renderinn6(change.doc.data());
+      renderinn6(change.doc);
     }
   });
 });
@@ -492,13 +492,13 @@ function renderinn1B(doc) {
   let econinn1B = document.createElement('td');
 
   trinn1B.setAttribute('data-id', doc.id);
-  nameinn1B.textContent = doc.name;
-  oversinn1B.textContent = doc.overs;
-  maideninn1B.textContent = doc.maiden;
-  runsinn1B.textContent = doc.score;
-  wicketsinn1B.textContent = doc.wickets;
+  nameinn1B.textContent = doc.data().name;
+  oversinn1B.textContent = doc.data().overs;
+  maideninn1B.textContent = doc.data().maiden;
+  runsinn1B.textContent = doc.data().score;
+  wicketsinn1B.textContent = doc.data().wickets;
   if (doc.overs != 0) {
-    econinn1B.textContent = (doc.score / doc.overs).toFixed(1);
+    econinn1B.textContent = (doc.data().score / doc.data().overs).toFixed(1);
   } else {
     econinn1B.textContent = '--';
   }
@@ -520,14 +520,14 @@ boardbatinn1B.onSnapshot(snapshot => {
   let changes = snapshot.docChanges();
   changes.forEach(change => {
     if (change.type == 'added') {
-      renderinn1B(change.doc.data());
+      renderinn1B(change.doc);
     } else if (change.type == 'removed') {
-      let trinn1B = inn1B.querySelector('[data-id=' + change.doc.data().id + ']');
+      let trinn1B = inn1B.querySelector('[data-id=' + change.doc.id + ']');
       inn1B.removeChild(trinn1B);
     } else if (change.type == 'modified') {
-      let trinn1B = inn1B.querySelector('[data-id=' + change.doc.data().id + ']');
+      let trinn1B = inn1B.querySelector('[data-id=' + change.doc.id + ']');
       inn1B.removeChild(trinn1B);
-      renderinn1B(change.doc.data());
+      renderinn1B(change.doc);
     }
   });
 });
@@ -549,13 +549,13 @@ function renderinn2B(doc) {
   let econinn2B = document.createElement('td');
 
   trinn2B.setAttribute('data-id', doc.id);
-  nameinn2B.textContent = doc.name;
-  oversinn2B.textContent = doc.overs;
-  maideninn2B.textContent = doc.maiden;
-  runsinn2B.textContent = doc.score;
-  wicketsinn2B.textContent = doc.wickets;
-  if (doc.overs != 0) {
-    econinn2B.textContent = (doc.score / doc.overs).toFixed(2);
+  nameinn2B.textContent = doc.data().name;
+  oversinn2B.textContent = doc.data().overs;
+  maideninn2B.textContent = doc.data().maiden;
+  runsinn2B.textContent = doc.data().score;
+  wicketsinn2B.textContent = doc.data().wickets;
+  if (doc.data().overs != 0) {
+    econinn2B.textContent = (doc.data().score / doc.data().overs).toFixed(2);
   } else {
     econinn2B.textContent = '--';
   }
@@ -577,14 +577,14 @@ boardbatinn2B.onSnapshot(snapshot => {
   let changes = snapshot.docChanges();
   changes.forEach(change => {
     if (change.type == 'added') {
-      renderinn2B(change.doc.data());
+      renderinn2B(change.doc);
     } else if (change.type == 'removed') {
-      let trinn2B = inn2B.querySelector('[data-id=' + change.doc.data().id + ']');
+      let trinn2B = inn2B.querySelector('[data-id=' + change.doc.id + ']');
       inn2B.removeChild(trinn2B);
     } else if (change.type == 'modified') {
-      let trinn2B = inn2B.querySelector('[data-id=' + change.doc.data().id + ']');
+      let trinn2B = inn2B.querySelector('[data-id=' + change.doc.id + ']');
       inn2B.removeChild(trinn2B);
-      renderinn2B(change.doc.data());
+      renderinn2B(change.doc);
     }
   });
 });
@@ -605,13 +605,13 @@ function renderinn3B(doc) {
   let econinn3B = document.createElement('td');
 
   trinn3B.setAttribute('data-id', doc.id);
-  nameinn3B.textContent = doc.name;
-  oversinn3B.textContent = doc.overs;
-  maideninn3B.textContent = doc.maiden;
-  runsinn3B.textContent = doc.score;
-  wicketsinn3B.textContent = doc.wickets;
-  if (doc.overs != 0) {
-    econinn3B.textContent = (doc.score / doc.overs).toFixed(2);
+  nameinn3B.textContent = doc.data().name;
+  oversinn3B.textContent = doc.data().overs;
+  maideninn3B.textContent = doc.data().maiden;
+  runsinn3B.textContent = doc.data().score;
+  wicketsinn3B.textContent = doc.data().wickets;
+  if (doc.data().overs != 0) {
+    econinn3B.textContent = (doc.data().score / doc.data().overs).toFixed(2);
   } else {
     econinn3B.textContent = '--';
   }
@@ -633,14 +633,14 @@ boardbatinn3B.onSnapshot(snapshot => {
   let changes = snapshot.docChanges();
   changes.forEach(change => {
     if (change.type == 'added') {
-      renderinn3B(change.doc.data());
+      renderinn3B(change.doc);
     } else if (change.type == 'removed') {
-      let trinn3B = inn3B.querySelector('[data-id=' + change.doc.data().id + ']');
+      let trinn3B = inn3B.querySelector('[data-id=' + change.doc.id + ']');
       inn3B.removeChild(trinn3B);
     } else if (change.type == 'modified') {
-      let trinn3B = inn3B.querySelector('[data-id=' + change.doc.data().id + ']');
+      let trinn3B = inn3B.querySelector('[data-id=' + change.doc.id + ']');
       inn3B.removeChild(trinn3B);
-      renderinn3B(change.doc.data());
+      renderinn3B(change.doc);
     }
   });
 });
@@ -660,13 +660,13 @@ function renderinn4B(doc) {
   let econinn4B = document.createElement('td');
 
   trinn4B.setAttribute('data-id', doc.id);
-  nameinn4B.textContent = doc.name;
-  oversinn4B.textContent = doc.overs;
-  maideninn4B.textContent = doc.maiden;
-  runsinn4B.textContent = doc.score;
-  wicketsinn4B.textContent = doc.wickets;
-  if (doc.overs != 0) {
-    econinn4B.textContent = (doc.score / doc.overs).toFixed(2);
+  nameinn4B.textContent = doc.data().name;
+  oversinn4B.textContent = doc.data().overs;
+  maideninn4B.textContent = doc.data().maiden;
+  runsinn4B.textContent = doc.data().score;
+  wicketsinn4B.textContent = doc.data().wickets;
+  if (doc.data().overs != 0) {
+    econinn4B.textContent = (doc.data().score / doc.data().overs).toFixed(2);
   } else {
     econinn4B.textContent = '--';
   }
@@ -688,14 +688,14 @@ boardbatinn4B.onSnapshot(snapshot => {
   let changes = snapshot.docChanges();
   changes.forEach(change => {
     if (change.type == 'added') {
-      renderinn4B(change.doc.data());
+      renderinn4B(change.doc);
     } else if (change.type == 'removed') {
-      let trinn4B = inn4B.querySelector('[data-id=' + change.doc.data().id + ']');
+      let trinn4B = inn4B.querySelector('[data-id=' + change.doc.id + ']');
       inn4B.removeChild(trinn4B);
     } else if (change.type == 'modified') {
-      let trinn4B = inn4B.querySelector('[data-id=' + change.doc.data().id + ']');
+      let trinn4B = inn4B.querySelector('[data-id=' + change.doc.id + ']');
       inn4B.removeChild(trinn4B);
-      renderinn4B(change.doc.data());
+      renderinn4B(change.doc);
     }
   });
 });
@@ -715,13 +715,13 @@ function renderinn5B(doc) {
   let econinn5B = document.createElement('td');
 
   trinn5B.setAttribute('data-id', doc.id);
-  nameinn5B.textContent = doc.name;
-  oversinn5B.textContent = doc.overs;
-  maideninn5B.textContent = doc.maiden;
-  runsinn5B.textContent = doc.score;
-  wicketsinn5B.textContent = doc.wickets;
-  if (doc.overs != 0) {
-    econinn5B.textContent = (doc.score / doc.overs).toFixed(2);
+  nameinn5B.textContent = doc.data().name;
+  oversinn5B.textContent = doc.data().overs;
+  maideninn5B.textContent = doc.data().maiden;
+  runsinn5B.textContent = doc.data().score;
+  wicketsinn5B.textContent = doc.data().wickets;
+  if (doc.data().overs != 0) {
+    econinn5B.textContent = (doc.data().score / doc.data().overs).toFixed(2);
   } else {
     econinn5B.textContent = '--';
   }
@@ -743,14 +743,14 @@ boardbatinn5B.onSnapshot(snapshot => {
   let changes = snapshot.docChanges();
   changes.forEach(change => {
     if (change.type == 'added') {
-      renderinn5B(change.doc.data());
+      renderinn5B(change.doc);
     } else if (change.type == 'removed') {
-      let trinn5B = inn5B.querySelector('[data-id=' + change.doc.data().id + ']');
+      let trinn5B = inn5B.querySelector('[data-id=' + change.doc.id + ']');
       inn5B.removeChild(trinn5B);
     } else if (change.type == 'modified') {
-      let trinn5B = inn5B.querySelector('[data-id=' + change.doc.data().id + ']');
+      let trinn5B = inn5B.querySelector('[data-id=' + change.doc.id + ']');
       inn5B.removeChild(trinn5B);
-      renderinn5B(change.doc.data());
+      renderinn5B(change.doc);
     }
   });
 });
@@ -769,13 +769,13 @@ function renderinn6B(doc) {
   let econinn6B = document.createElement('td');
 
   trinn6B.setAttribute('data-id', doc.id);
-  nameinn6B.textContent = doc.name;
-  oversinn6B.textContent = doc.overs;
-  maideninn6B.textContent = doc.maiden;
-  runsinn6B.textContent = doc.score;
-  wicketsinn6B.textContent = doc.wickets;
-  if (doc.overs != 0) {
-    econinn6B.textContent = (doc.score / doc.overs).toFixed(2);
+  nameinn6B.textContent = doc.data().name;
+  oversinn6B.textContent = doc.data().overs;
+  maideninn6B.textContent = doc.data().maiden;
+  runsinn6B.textContent = doc.data().score;
+  wicketsinn6B.textContent = doc.data().wickets;
+  if (doc.data().overs != 0) {
+    econinn6B.textContent = (doc.data().score / doc.data().overs).toFixed(2);
   } else {
     econinn6B.textContent = '--';
   }
@@ -797,14 +797,14 @@ boardbatinn6B.onSnapshot(snapshot => {
   let changes = snapshot.docChanges();
   changes.forEach(change => {
     if (change.type == 'added') {
-      renderinn6B(change.doc.data());
+      renderinn6B(change.doc);
     } else if (change.type == 'removed') {
-      let trinn6B = inn6B.querySelector('[data-id=' + change.doc.data().id + ']');
+      let trinn6B = inn6B.querySelector('[data-id=' + change.doc.id + ']');
       inn6B.removeChild(trinn6B);
     } else if (change.type == 'modified') {
-      let trinn6B = inn6B.querySelector('[data-id=' + change.doc.data().id + ']');
+      let trinn6B = inn6B.querySelector('[data-id=' + change.doc.id + ']');
       inn6B.removeChild(trinn6B);
-      renderinn6B(change.doc.data());
+      renderinn6B(change.doc);
     }
   });
 });
@@ -864,42 +864,42 @@ extrasinn1.onSnapshot(function (doc) {
   inn1PE.innerHTML = doc.data().penalty;
 });
 
-// extrasinn2.onSnapshot(function (doc) {
-//   inn2WD = doc.data().wides;
-//   inn2NB = doc.data().noballs;
-//   inn2BY = doc.data().byes;
-//   inn2LB = doc.data().legbyes;
-//   inn2PE = doc.data().penalty;
-// });
+extrasinn2.onSnapshot(function (doc) {
+  inn2WD = doc.data().wides;
+  inn2NB = doc.data().noballs;
+  inn2BY = doc.data().byes;
+  inn2LB = doc.data().legbyes;
+  inn2PE = doc.data().penalty;
+});
 
-// extrasinn3.onSnapshot(function (doc) {
-//   inn3WD = doc.data().wides;
-//   inn3NB = doc.data().noballs;
-//   inn3BY = doc.data().byes;
-//   inn3LB = doc.data().legbyes;
-//   inn3PE = doc.data().penalty;
-// });
+extrasinn3.onSnapshot(function (doc) {
+  inn3WD = doc.data().wides;
+  inn3NB = doc.data().noballs;
+  inn3BY = doc.data().byes;
+  inn3LB = doc.data().legbyes;
+  inn3PE = doc.data().penalty;
+});
 
-// extrasinn4.onSnapshot(function (doc) {
-//   inn4WD = doc.data().wides;
-//   inn4NB = doc.data().noballs;
-//   inn4BY = doc.data().byes;
-//   inn4LB = doc.data().legbyes;
-//   inn4PE = doc.data().penalty;
-// });
+extrasinn4.onSnapshot(function (doc) {
+  inn4WD = doc.data().wides;
+  inn4NB = doc.data().noballs;
+  inn4BY = doc.data().byes;
+  inn4LB = doc.data().legbyes;
+  inn4PE = doc.data().penalty;
+});
 
-// extrasinn5.onSnapshot(function (doc) {
-//   inn5WD = doc.data().wides;
-//   inn5NB = doc.data().noballs;
-//   inn5BY = doc.data().byes;
-//   inn5LB = doc.data().legbyes;
-//   inn5PE = doc.data().penalty;
-// });
+extrasinn5.onSnapshot(function (doc) {
+  inn5WD = doc.data().wides;
+  inn5NB = doc.data().noballs;
+  inn5BY = doc.data().byes;
+  inn5LB = doc.data().legbyes;
+  inn5PE = doc.data().penalty;
+});
 
-// extrasinn6.onSnapshot(function (doc) {
-//   inn6WD = doc.data().wides;
-//   inn6NB = doc.data().noballs;
-//   inn6BY = doc.data().byes;
-//   inn6LB = doc.data().legbyes;
-//   inn6PE = doc.data().penalty;
-// });
+extrasinn6.onSnapshot(function (doc) {
+  inn6WD = doc.data().wides;
+  inn6NB = doc.data().noballs;
+  inn6BY = doc.data().byes;
+  inn6LB = doc.data().legbyes;
+  inn6PE = doc.data().penalty;
+});
