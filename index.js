@@ -1,3 +1,19 @@
+var config = {
+  apiKey: "AIzaSyB9C-ocmR0dhZbDZxU7vWyr6GqcHgk5cOc",
+  authDomain: "bomdb-57efe.firebaseapp.com",
+  databaseURL: "https://bomdb-57efe.firebaseio.com",
+  projectId: "bomdb-57efe",
+  storageBucket: "bomdb-57efe.appspot.com",
+  messagingSenderId: "509449260834",
+  appId: "1:509449260834:web:8be8a90fdaad1ac31e5f7b",
+  measurementId: "G-QKY8J7YJX9"
+};
+firebase.initializeApp(config);
+const db = firebase.firestore();
+db.settings({
+  timestampsInSnapshots: true
+});
+
 //now inn(schoolname, inningtype)
 
 var school = document.getElementById('school');
