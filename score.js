@@ -865,41 +865,41 @@ extrasinn1.onSnapshot(function (doc) {
 });
 
 extrasinn2.onSnapshot(function (doc) {
-  inn2WD = doc.data().wides;
-  inn2NB = doc.data().noballs;
-  inn2BY = doc.data().byes;
-  inn2LB = doc.data().legbyes;
-  inn2PE = doc.data().penalty;
+  inn2WD.innerHTML = doc.data().wides;
+  inn2NB.innerHTML = doc.data().noballs;
+  inn2BY.innerHTML = doc.data().byes;
+  inn2LB.innerHTML = doc.data().legbyes;
+  inn2PE.innerHTML = doc.data().penalty;
 });
 
 extrasinn3.onSnapshot(function (doc) {
-  inn3WD = doc.data().wides;
-  inn3NB = doc.data().noballs;
-  inn3BY = doc.data().byes;
-  inn3LB = doc.data().legbyes;
-  inn3PE = doc.data().penalty;
+  inn3WD.innerHTML = doc.data().wides;
+  inn3NB.innerHTML = doc.data().noballs;
+  inn3BY.innerHTML = doc.data().byes;
+  inn3LB.innerHTML = doc.data().legbyes;
+  inn3PE.innerHTML = doc.data().penalty;
 });
 
 extrasinn4.onSnapshot(function (doc) {
-  inn4WD = doc.data().wides;
-  inn4NB = doc.data().noballs;
-  inn4BY = doc.data().byes;
-  inn4LB = doc.data().legbyes;
-  inn4PE = doc.data().penalty;
+  inn4WD.innerHTML = doc.data().wides;
+  inn4NB.innerHTML = doc.data().noballs;
+  inn4BY.innerHTML = doc.data().byes;
+  inn4LB.innerHTML = doc.data().legbyes;
+  inn4PE.innerHTML = doc.data().penalty;
 });
 
 extrasinn5.onSnapshot(function (doc) {
-  inn5WD = doc.data().wides;
-  inn5NB = doc.data().noballs;
-  inn5BY = doc.data().byes;
-  inn5LB = doc.data().legbyes;
-  inn5PE = doc.data().penalty;
+  inn5WD.innerHTML = doc.data().wides;
+  inn5NB.innerHTML = doc.data().noballs;
+  inn5BY.innerHTML = doc.data().byes;
+  inn5LB.innerHTML = doc.data().legbyes;
+  inn5PE.innerHTML = doc.data().penalty;
 });
 
 extrasinn6.onSnapshot(function (doc) {
-  inn6WD = doc.data().wides;
-  inn6NB = doc.data().noballs;
-  inn6BY = doc.data().byes;
-  inn6LB = doc.data().legbyes;
-  inn6PE = doc.data().penalty;
+  inn6WD.innerHTML = doc.data().wides;
+  inn6NB.innerHTML = doc.data().noballs;
+  inn6BY.innerHTML = doc.data().byes;
+  inn6LB.innerHTML = doc.data().legbyes;
+  inn6PE.innerHTML = doc.data().penalty;
 });
